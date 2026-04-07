@@ -313,27 +313,13 @@ class PointerIcon extends WatchUi.Drawable {
 class GearIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
     function draw(dc) {
-        // Riempiamo lo sfondo dell'oblò di bianco
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.clear();
-        
-        // Disegniamo l'ingranaggio nero
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(2);
-        
-        var cx = dc.getWidth() / 2;
-        var cy = dc.getHeight() / 2;
-        
-        // Corpo dell'ingranaggio
-        dc.drawCircle(cx, cy, 10);
-        dc.drawCircle(cx, cy, 4); // Foro centrale
-        
-        // 6 Denti (stile nativo Garmin)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT); dc.setPenWidth(2);
+        var cx = dc.getWidth()/2; var cy = dc.getHeight()/2;
+        dc.drawCircle(cx, cy, 10); dc.drawCircle(cx, cy, 4);
         for (var i = 0; i < 6; i++) {
             var ang = i * Math.PI / 3;
-            // Linee per i denti
-            dc.drawLine(cx + 8 * Math.cos(ang), cy + 8 * Math.sin(ang), 
-                        cx + 13 * Math.cos(ang), cy + 13 * Math.sin(ang));
+            dc.drawLine(cx + 8 * Math.cos(ang), cy + 8 * Math.sin(ang), cx + 13 * Math.cos(ang), cy + 13 * Math.sin(ang));
         }
     }
 }
