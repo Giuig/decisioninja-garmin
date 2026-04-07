@@ -296,11 +296,35 @@ class BinaryIcon extends WatchUi.Drawable {
 
 class DiceIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
+
     function draw(dc) {
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT); dc.setPenWidth(3);
-        dc.drawRectangle(dc.getWidth()/2 - 10, dc.getHeight()/2 - 10, 20, 20);
-        dc.fillCircle(dc.getWidth()/2, dc.getHeight()/2, 3);
+        // 1. Clear background for the sub-window
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.clear();
+        
+        var cx = dc.getWidth() / 2;
+        var cy = dc.getHeight() / 2;
+        var size = 28; // Total size of the dice body
+        var half = size / 2;
+        var offset = 8; // Distance of dots from the center
+        
+        // 2. Draw the main black body of the dice
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.fillRoundedRectangle(cx - half, cy - half, size, size, 4);
+        
+        // 3. Draw the 5 white dots (matching your SVG)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        
+        // Center dot
+        dc.fillCircle(cx, cy, 3);
+        
+        // Top-left and Bottom-right
+        dc.fillCircle(cx - offset, cy - offset, 3);
+        dc.fillCircle(cx + offset, cy + offset, 3);
+        
+        // Top-right and Bottom-left
+        dc.fillCircle(cx + offset, cy - offset, 3);
+        dc.fillCircle(cx - offset, cy + offset, 3);
     }
 }
 
