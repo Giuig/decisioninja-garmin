@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProjectInfo xmlns="http://www.garmin.com/ConnectIQ/ProjectInfo">
+    <Application>
+        <Name>Decisioninja</Name>
+        <Description>Decisioninja - A decision helper app for Garmin</Description>
+        <Type>app</Type>
+        <MasterAppId></MasterAppId>
+        <Language>en</Language>
+        <MinAPI>9.1.0</MinAPI>
+        <TargetAPI>9.1.0</TargetAPI>
+    </Application>
+    <Devices>
+        <Device id="instinct3solar45mm"/>
+    </Devices>
+    <Resources>
+        <Resource filename="resources/resources.xml"/>
+    </Resources>
+    <SourceFiles>
+        <SourceFile filename="source/DecisioninjaApp.mc"/>
+    </SourceFiles>
+</ProjectInfo>

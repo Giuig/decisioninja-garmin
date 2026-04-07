@@ -1,0 +1,1532 @@
+[ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 12; @symbol_moduledef = [Strings,12,11,18]; ]
+    module Strings {
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 13; @position = 27; initialized = true; @symbol_vardef = [AppDescription,13,27,41]; @symbol_type<0> = [ResourceId,13,45,55]; ]
+        var AppDescription as ResourceId;
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 14; @position = 27; initialized = true; @symbol_vardef = [AppName,14,27,34]; @symbol_type<0> = [ResourceId,14,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 17; @symbol_moduledef = [Styles,17,11,17]; ]
+    module Styles {
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 17; ]
+        <init> {
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 18; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,18,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 18; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 19; @position = 18; @symbol_constdef = [exclude,19,18,25]; @symbol_type<0> = [Boolean,19,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 22; @symbol_moduledef = [system_size__menu_header,22,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 22; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 23; @position = 18; @symbol_constdef = [width,23,18,23]; @symbol_type<0> = [Number,23,27,33]; ]
+            const width as Number = 175;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 24; @position = 18; @symbol_constdef = [height,24,18,24]; @symbol_type<0> = [Number,24,28,34]; ]
+            const height as Number = 62;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 27; @symbol_moduledef = [system_loc__hint_button_left_bottom,27,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 27; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 28; @position = 18; @symbol_constdef = [exclude,28,18,25]; @symbol_type<0> = [Boolean,28,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 31; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,31,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 31; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 32; @position = 18; @symbol_constdef = [exclude,32,18,25]; @symbol_type<0> = [Boolean,32,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 35; @symbol_moduledef = [prompt_loc__body_no_title,35,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 35; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 36; @position = 18; @symbol_constdef = [x,36,18,19]; @symbol_type<0> = [Number,36,23,29]; ]
+            const x as Number = 5;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 37; @position = 18; @symbol_constdef = [y,37,18,19]; @symbol_type<0> = [Number,37,23,29]; ]
+            const y as Number = 77;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 40; @symbol_moduledef = [system_icon_dark__about,40,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 40; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 41; @position = 18; @symbol_constdef = [filename,41,18,26]; @symbol_type<0> = [String,41,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__about.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 42; @position = 18; @symbol_constdef = [disableTransparency,42,18,37]; @symbol_type<0> = [Boolean,42,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 43; @position = 18; @symbol_constdef = [dithering,43,18,27]; @symbol_type<0> = [String,43,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 44; @position = 18; @symbol_constdef = [automaticPalette,44,18,34]; @symbol_type<0> = [Boolean,44,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 47; @symbol_moduledef = [system_icon_light__question,47,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 47; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 48; @position = 18; @symbol_constdef = [filename,48,18,26]; @symbol_type<0> = [String,48,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__question.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 49; @position = 18; @symbol_constdef = [disableTransparency,49,18,37]; @symbol_type<0> = [Boolean,49,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 50; @position = 18; @symbol_constdef = [dithering,50,18,27]; @symbol_type<0> = [String,50,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 51; @position = 18; @symbol_constdef = [automaticPalette,51,18,34]; @symbol_type<0> = [Boolean,51,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 54; @symbol_moduledef = [system_loc__hint_button_left_top,54,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 54; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 55; @position = 18; @symbol_constdef = [exclude,55,18,25]; @symbol_type<0> = [Boolean,55,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 58; @symbol_moduledef = [prompt_font__title,58,15,33]; ]
+        module prompt_font__title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 58; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 59 18 ]
+                symbol [ Graphics %tmp.1 59 34 42 ];
+                %tmp.1 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_RIGHT %tmp.2 59 43 61 ];
+                %tmp.2 = getv %tmp.1 :TEXT_JUSTIFY_RIGHT;
+                symbol [ Graphics %tmp.3 59 62 70 ];
+                %tmp.3 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.4 59 71 91 ];
+                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_VCENTER;
+                %tmp.5 = bitor %tmp.2 %tmp.4;
+                putv self :justification %tmp.5;
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 60 18 ]
+                symbol [ Graphics %tmp.6 60 25 33 ];
+                %tmp.6 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.7 60 34 43 ];
+                %tmp.7 = getv %tmp.6 :FONT_TINY;
+                putv self :font %tmp.7;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 59; @position = 18; @symbol_constdef = [justification,59,18,31]; ]
+            const justification;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 60; @position = 18; @symbol_constdef = [font,60,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 63; @symbol_moduledef = [system_icon_dark__discard,63,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 63; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 64; @position = 18; @symbol_constdef = [filename,64,18,26]; @symbol_type<0> = [String,64,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__discard.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 65; @position = 18; @symbol_constdef = [disableTransparency,65,18,37]; @symbol_type<0> = [Boolean,65,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 66; @position = 18; @symbol_constdef = [dithering,66,18,27]; @symbol_type<0> = [String,66,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 67; @position = 18; @symbol_constdef = [automaticPalette,67,18,34]; @symbol_type<0> = [Boolean,67,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 70; @symbol_moduledef = [system_size__menu_item,70,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 70; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [width,71,18,23]; @symbol_type<0> = [Number,71,27,33]; ]
+            const width as Number = 175;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 72; @position = 18; @symbol_constdef = [height,72,18,24]; @symbol_type<0> = [Number,72,28,34]; ]
+            const height as Number = 58;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 75; @symbol_moduledef = [system_color_dark__text,75,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 75; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 77 18 ]
+                symbol [ Graphics %tmp.8 77 31 39 ];
+                %tmp.8 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.9 77 40 57 ];
+                %tmp.9 = getv %tmp.8 :COLOR_TRANSPARENT;
+                putv self :background %tmp.9;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 76; @position = 18; @symbol_constdef = [color,76,18,23]; @symbol_type<0> = [Number,76,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 77; @position = 18; @symbol_constdef = [background,77,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 80; @symbol_moduledef = [system_icon_destructive__discard,80,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 80; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 81; @position = 18; @symbol_constdef = [filename,81,18,26]; @symbol_type<0> = [String,81,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__discard.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 82; @position = 18; @symbol_constdef = [disableTransparency,82,18,37]; @symbol_type<0> = [Boolean,82,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [dithering,83,18,27]; @symbol_type<0> = [String,83,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [automaticPalette,84,18,34]; @symbol_type<0> = [Boolean,84,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 87; @symbol_moduledef = [system_icon_dark__hint_action_menu,87,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 87; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 88; @position = 18; @symbol_constdef = [filename,88,18,26]; @symbol_type<0> = [String,88,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 89; @position = 18; @symbol_constdef = [disableTransparency,89,18,37]; @symbol_type<0> = [Boolean,89,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 90; @position = 18; @symbol_constdef = [dithering,90,18,27]; @symbol_type<0> = [String,90,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 91; @position = 18; @symbol_constdef = [automaticPalette,91,18,34]; @symbol_type<0> = [Boolean,91,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 94; @symbol_moduledef = [prompt_size__title,94,15,33]; ]
+        module prompt_size__title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 94; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [width,95,18,23]; @symbol_type<0> = [Number,95,27,33]; ]
+            const width as Number = 67;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 96; @position = 18; @symbol_constdef = [height,96,18,24]; @symbol_type<0> = [Number,96,28,34]; ]
+            const height as Number = 60;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 99; @symbol_moduledef = [confirmation_font__body,99,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 99; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 100 18 ]
+                symbol [ Graphics %tmp.10 100 34 42 ];
+                %tmp.10 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.11 100 43 62 ];
+                %tmp.11 = getv %tmp.10 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.11;
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 101 18 ]
+                symbol [ Graphics %tmp.12 101 25 33 ];
+                %tmp.12 = getm $.Toybox.Graphics;
+                symbol [ FONT_XTINY %tmp.13 101 34 44 ];
+                %tmp.13 = getv %tmp.12 :FONT_XTINY;
+                putv self :font %tmp.13;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [justification,100,18,31]; ]
+            const justification;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [font,101,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 104; @symbol_moduledef = [system_color_dark__background,104,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 104; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 105; @position = 18; @symbol_constdef = [color,105,18,23]; @symbol_type<0> = [Number,105,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 106; @position = 18; @symbol_constdef = [background,106,18,28]; @symbol_type<0> = [Number,106,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 109; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,109,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 109; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 110; @position = 18; @symbol_constdef = [exclude,110,18,25]; @symbol_type<0> = [Boolean,110,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 113; @symbol_moduledef = [system_size__launch_icon,113,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 113; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 114; @position = 18; @symbol_constdef = [scaleX,114,18,24]; @symbol_type<0> = [Number,114,28,34]; ]
+            const scaleX as Number = 62;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 115; @position = 18; @symbol_constdef = [scaleY,115,18,24]; @symbol_type<0> = [Number,115,28,34]; ]
+            const scaleY as Number = 62;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [scaleRelativeTo,116,18,33]; @symbol_type<0> = [String,116,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 119; @symbol_moduledef = [confirmation_input__confirm,119,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 119; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 120 18 ]
+                symbol [ WatchUi %tmp.14 120 27 34 ];
+                %tmp.14 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.15 120 35 44 ];
+                %tmp.15 = getv %tmp.14 :KEY_ENTER;
+                putv self :button %tmp.15;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [button,120,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 123; @symbol_moduledef = [prompt_font__body_with_title,123,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 123; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 124 18 ]
+                symbol [ Graphics %tmp.16 124 34 42 ];
+                %tmp.16 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.17 124 43 62 ];
+                %tmp.17 = getv %tmp.16 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.17;
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 125 18 ]
+                symbol [ Graphics %tmp.18 125 25 33 ];
+                %tmp.18 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.19 125 34 43 ];
+                %tmp.19 = getv %tmp.18 :FONT_TINY;
+                putv self :font %tmp.19;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 124; @position = 18; @symbol_constdef = [justification,124,18,31]; ]
+            const justification;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [font,125,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 128; @symbol_moduledef = [confirmation_loc__body,128,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 128; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 129; @position = 18; @symbol_constdef = [x,129,18,19]; @symbol_type<0> = [Number,129,23,29]; ]
+            const x as Number = 2;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [y,130,18,19]; @symbol_type<0> = [Number,130,23,29]; ]
+            const y as Number = 81;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 133; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,133,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 133; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 134; @position = 18; @symbol_constdef = [exclude,134,18,25]; @symbol_type<0> = [Boolean,134,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 137; @symbol_moduledef = [prompt_color_dark__background,137,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 137; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 138; @position = 18; @symbol_constdef = [background,138,18,28]; @symbol_type<0> = [Number,138,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 141; @symbol_moduledef = [system_icon_destructive__hint_action_menu,141,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 141; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 142; @position = 18; @symbol_constdef = [filename,142,18,26]; @symbol_type<0> = [String,142,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 143; @position = 18; @symbol_constdef = [disableTransparency,143,18,37]; @symbol_type<0> = [Boolean,143,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 144; @position = 18; @symbol_constdef = [dithering,144,18,27]; @symbol_type<0> = [String,144,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 145; @position = 18; @symbol_constdef = [automaticPalette,145,18,34]; @symbol_type<0> = [Boolean,145,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 148; @symbol_moduledef = [system_loc__hint_action_menu,148,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 148; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [x,149,18,19]; @symbol_type<0> = [Number,149,23,29]; ]
+            const x as Number = 166;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 150; @position = 18; @symbol_constdef = [y,150,18,19]; @symbol_type<0> = [Number,150,23,29]; ]
+            const y as Number = 31;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 151; @position = 18; @symbol_constdef = [horizontalJustification,151,18,41]; @symbol_type<0> = [String,151,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 152; @position = 18; @symbol_constdef = [verticalJustification,152,18,39]; @symbol_type<0> = [String,152,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 155; @symbol_moduledef = [confirmation_icon__hint_confirm,155,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 155; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 156; @position = 18; @symbol_constdef = [filename,156,18,26]; @symbol_type<0> = [String,156,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 157; @position = 18; @symbol_constdef = [disableTransparency,157,18,37]; @symbol_type<0> = [Boolean,157,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [dithering,158,18,27]; @symbol_type<0> = [String,158,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 159; @position = 18; @symbol_constdef = [automaticPalette,159,18,34]; @symbol_type<0> = [Boolean,159,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 162; @symbol_moduledef = [system_loc__hint_button_left_middle,162,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 162; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 163; @position = 18; @symbol_constdef = [exclude,163,18,25]; @symbol_type<0> = [Boolean,163,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 166; @symbol_moduledef = [prompt_size__body_no_title,166,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 166; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 167; @position = 18; @symbol_constdef = [width,167,18,23]; @symbol_type<0> = [Number,167,27,33]; ]
+            const width as Number = 166;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [height,168,18,24]; @symbol_type<0> = [Number,168,28,34]; ]
+            const height as Number = 99;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 171; @symbol_moduledef = [system_icon_light__hint_button_left_top,171,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 171; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 172; @position = 18; @symbol_constdef = [exclude,172,18,25]; @symbol_type<0> = [Boolean,172,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 175; @symbol_moduledef = [prompt_color_light__background,175,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 175; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 176; @position = 18; @symbol_constdef = [background,176,18,28]; @symbol_type<0> = [Number,176,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 179; @symbol_moduledef = [confirmation_input__delete,179,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 179; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 180 18 ]
+                symbol [ WatchUi %tmp.20 180 27 34 ];
+                %tmp.20 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.21 180 35 44 ];
+                %tmp.21 = getv %tmp.20 :KEY_ENTER;
+                putv self :button %tmp.21;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 180; @position = 18; @symbol_constdef = [button,180,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 183; @symbol_moduledef = [system_icon_dark__hint_button_left_top,183,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 183; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 184; @position = 18; @symbol_constdef = [exclude,184,18,25]; @symbol_type<0> = [Boolean,184,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 187; @symbol_moduledef = [system_input__action_menu,187,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 187; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 188 18 ]
+                symbol [ WatchUi %tmp.22 188 27 34 ];
+                %tmp.22 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.23 188 35 44 ];
+                %tmp.23 = getv %tmp.22 :KEY_ENTER;
+                putv self :button %tmp.23;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 188; @position = 18; @symbol_constdef = [button,188,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 191; @symbol_moduledef = [system_icon_light__save,191,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 191; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 192; @position = 18; @symbol_constdef = [filename,192,18,26]; @symbol_type<0> = [String,192,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__save.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 193; @position = 18; @symbol_constdef = [disableTransparency,193,18,37]; @symbol_type<0> = [Boolean,193,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 194; @position = 18; @symbol_constdef = [dithering,194,18,27]; @symbol_type<0> = [String,194,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 195; @position = 18; @symbol_constdef = [automaticPalette,195,18,34]; @symbol_type<0> = [Boolean,195,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 198; @symbol_moduledef = [prompt_color_light__body,198,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 198; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 200 18 ]
+                symbol [ Graphics %tmp.24 200 31 39 ];
+                %tmp.24 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.25 200 40 57 ];
+                %tmp.25 = getv %tmp.24 :COLOR_TRANSPARENT;
+                putv self :background %tmp.25;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 199; @position = 18; @symbol_constdef = [color,199,18,23]; @symbol_type<0> = [Number,199,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 200; @position = 18; @symbol_constdef = [background,200,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 203; @symbol_moduledef = [system_loc__subwindow,203,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 203; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 204; @position = 18; @symbol_constdef = [x,204,18,19]; @symbol_type<0> = [Number,204,23,29]; ]
+            const x as Number = 114;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 205; @position = 18; @symbol_constdef = [y,205,18,19]; @symbol_type<0> = [Number,205,23,29]; ]
+            const y as Number = 0;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 208; @symbol_moduledef = [system_icon_light__warning,208,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 208; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 209; @position = 18; @symbol_constdef = [filename,209,18,26]; @symbol_type<0> = [String,209,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__warning.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [disableTransparency,210,18,37]; @symbol_type<0> = [Boolean,210,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [dithering,211,18,27]; @symbol_type<0> = [String,211,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 212; @position = 18; @symbol_constdef = [automaticPalette,212,18,34]; @symbol_type<0> = [Boolean,212,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 215; @symbol_moduledef = [confirmation_color_light__body,215,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 215; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 217 18 ]
+                symbol [ Graphics %tmp.26 217 31 39 ];
+                %tmp.26 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.27 217 40 57 ];
+                %tmp.27 = getv %tmp.26 :COLOR_TRANSPARENT;
+                putv self :background %tmp.27;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 216; @position = 18; @symbol_constdef = [color,216,18,23]; @symbol_type<0> = [Number,216,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 217; @position = 18; @symbol_constdef = [background,217,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 220; @symbol_moduledef = [confirmation_icon_light__hint_keep,220,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 220; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 221; @position = 18; @symbol_constdef = [filename,221,18,26]; @symbol_type<0> = [String,221,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 222; @position = 18; @symbol_constdef = [disableTransparency,222,18,37]; @symbol_type<0> = [Boolean,222,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 223; @position = 18; @symbol_constdef = [dithering,223,18,27]; @symbol_type<0> = [String,223,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 224; @position = 18; @symbol_constdef = [automaticPalette,224,18,34]; @symbol_type<0> = [Boolean,224,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 227; @symbol_moduledef = [activity_color_light__background,227,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 227; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 228; @position = 18; @symbol_constdef = [color,228,18,23]; @symbol_type<0> = [Number,228,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 229; @position = 18; @symbol_constdef = [background,229,18,28]; @symbol_type<0> = [Number,229,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 232; @symbol_moduledef = [system_icon_positive__hint_button_right_top,232,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 232; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 233; @position = 18; @symbol_constdef = [filename,233,18,26]; @symbol_type<0> = [String,233,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 234; @position = 18; @symbol_constdef = [disableTransparency,234,18,37]; @symbol_type<0> = [Boolean,234,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 235; @position = 18; @symbol_constdef = [dithering,235,18,27]; @symbol_type<0> = [String,235,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 236; @position = 18; @symbol_constdef = [automaticPalette,236,18,34]; @symbol_type<0> = [Boolean,236,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 239; @symbol_moduledef = [system_size__screen,239,15,34]; ]
+        module system_size__screen {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 239; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 240; @position = 18; @symbol_constdef = [width,240,18,23]; @symbol_type<0> = [Number,240,27,33]; ]
+            const width as Number = 176;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 241; @position = 18; @symbol_constdef = [height,241,18,24]; @symbol_type<0> = [Number,241,28,34]; ]
+            const height as Number = 176;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 244; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,244,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 244; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 245; @position = 18; @symbol_constdef = [exclude,245,18,25]; @symbol_type<0> = [Boolean,245,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 248; @symbol_moduledef = [system_color_light__background,248,15,45]; ]
+        module system_color_light__background {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 248; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 249; @position = 18; @symbol_constdef = [color,249,18,23]; @symbol_type<0> = [Number,249,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 250; @position = 18; @symbol_constdef = [background,250,18,28]; @symbol_type<0> = [Number,250,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 253; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,253,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 253; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 254; @position = 18; @symbol_constdef = [filename,254,18,26]; @symbol_type<0> = [String,254,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_destructive__hint_button_right_top.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 255; @position = 18; @symbol_constdef = [disableTransparency,255,18,37]; @symbol_type<0> = [Boolean,255,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 256; @position = 18; @symbol_constdef = [dithering,256,18,27]; @symbol_type<0> = [String,256,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 257; @position = 18; @symbol_constdef = [automaticPalette,257,18,34]; @symbol_type<0> = [Boolean,257,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 260; @symbol_moduledef = [confirmation_loc__hint_confirm,260,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 260; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [x,261,18,19]; @symbol_type<0> = [Number,261,23,29]; ]
+            const x as Number = 113;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 262; @position = 18; @symbol_constdef = [y,262,18,19]; @symbol_type<0> = [Number,262,23,29]; ]
+            const y as Number = 1;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 265; @symbol_moduledef = [activity_color_dark__text,265,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 265; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 267 18 ]
+                symbol [ Graphics %tmp.28 267 31 39 ];
+                %tmp.28 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.29 267 40 57 ];
+                %tmp.29 = getv %tmp.28 :COLOR_TRANSPARENT;
+                putv self :background %tmp.29;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [color,266,18,23]; @symbol_type<0> = [Number,266,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 267; @position = 18; @symbol_constdef = [background,267,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 270; @symbol_moduledef = [confirmation_input__keep,270,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 270; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 271 18 ]
+                symbol [ WatchUi %tmp.30 271 27 34 ];
+                %tmp.30 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.31 271 35 43 ];
+                %tmp.31 = getv %tmp.30 :KEY_DOWN;
+                putv self :button %tmp.31;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 271; @position = 18; @symbol_constdef = [button,271,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 274; @symbol_moduledef = [prompt_loc__body_with_title,274,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 274; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 275; @position = 18; @symbol_constdef = [x,275,18,19]; @symbol_type<0> = [Number,275,23,29]; ]
+            const x as Number = 5;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 276; @position = 18; @symbol_constdef = [y,276,18,19]; @symbol_type<0> = [Number,276,23,29]; ]
+            const y as Number = 77;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 279; @symbol_moduledef = [system_icon_dark__search,279,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 279; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 280; @position = 18; @symbol_constdef = [filename,280,18,26]; @symbol_type<0> = [String,280,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__search.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 281; @position = 18; @symbol_constdef = [disableTransparency,281,18,37]; @symbol_type<0> = [Boolean,281,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 282; @position = 18; @symbol_constdef = [dithering,282,18,27]; @symbol_type<0> = [String,282,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 283; @position = 18; @symbol_constdef = [automaticPalette,283,18,34]; @symbol_type<0> = [Boolean,283,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 286; @symbol_moduledef = [activity_color_light__text,286,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 286; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 288 18 ]
+                symbol [ Graphics %tmp.32 288 31 39 ];
+                %tmp.32 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.33 288 40 57 ];
+                %tmp.33 = getv %tmp.32 :COLOR_TRANSPARENT;
+                putv self :background %tmp.33;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 287; @position = 18; @symbol_constdef = [color,287,18,23]; @symbol_type<0> = [Number,287,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 288; @position = 18; @symbol_constdef = [background,288,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 291; @symbol_moduledef = [confirmation_icon__hint_keep,291,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 291; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 292; @position = 18; @symbol_constdef = [filename,292,18,26]; @symbol_type<0> = [String,292,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 293; @position = 18; @symbol_constdef = [disableTransparency,293,18,37]; @symbol_type<0> = [Boolean,293,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 294; @position = 18; @symbol_constdef = [dithering,294,18,27]; @symbol_type<0> = [String,294,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 295; @position = 18; @symbol_constdef = [automaticPalette,295,18,34]; @symbol_type<0> = [Boolean,295,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 298; @symbol_moduledef = [system_icon_dark__save,298,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 298; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [filename,299,18,26]; @symbol_type<0> = [String,299,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__save.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 300; @position = 18; @symbol_constdef = [disableTransparency,300,18,37]; @symbol_type<0> = [Boolean,300,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 301; @position = 18; @symbol_constdef = [dithering,301,18,27]; @symbol_type<0> = [String,301,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 302; @position = 18; @symbol_constdef = [automaticPalette,302,18,34]; @symbol_type<0> = [Boolean,302,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 305; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,305,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 305; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 306; @position = 18; @symbol_constdef = [exclude,306,18,25]; @symbol_type<0> = [Boolean,306,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 309; @symbol_moduledef = [system_icon_light__search,309,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 309; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 310; @position = 18; @symbol_constdef = [filename,310,18,26]; @symbol_type<0> = [String,310,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__search.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 311; @position = 18; @symbol_constdef = [disableTransparency,311,18,37]; @symbol_type<0> = [Boolean,311,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 312; @position = 18; @symbol_constdef = [dithering,312,18,27]; @symbol_type<0> = [String,312,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 313; @position = 18; @symbol_constdef = [automaticPalette,313,18,34]; @symbol_type<0> = [Boolean,313,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 316; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,316,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 316; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 317; @position = 18; @symbol_constdef = [exclude,317,18,25]; @symbol_type<0> = [Boolean,317,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 320; @symbol_moduledef = [system_icon_positive__hint_button_left_top,320,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 320; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 321; @position = 18; @symbol_constdef = [exclude,321,18,25]; @symbol_type<0> = [Boolean,321,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 324; @symbol_moduledef = [system_loc__hint_button_right_bottom,324,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 324; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 325; @position = 18; @symbol_constdef = [exclude,325,18,25]; @symbol_type<0> = [Boolean,325,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 328; @symbol_moduledef = [confirmation_icon_dark__hint_reject,328,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 328; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 329; @position = 18; @symbol_constdef = [filename,329,18,26]; @symbol_type<0> = [String,329,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 330; @position = 18; @symbol_constdef = [disableTransparency,330,18,37]; @symbol_type<0> = [Boolean,330,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [dithering,331,18,27]; @symbol_type<0> = [String,331,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 332; @position = 18; @symbol_constdef = [automaticPalette,332,18,34]; @symbol_type<0> = [Boolean,332,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 335; @symbol_moduledef = [confirmation_color_dark__body,335,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 335; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 337 18 ]
+                symbol [ Graphics %tmp.34 337 31 39 ];
+                %tmp.34 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.35 337 40 57 ];
+                %tmp.35 = getv %tmp.34 :COLOR_TRANSPARENT;
+                putv self :background %tmp.35;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 336; @position = 18; @symbol_constdef = [color,336,18,23]; @symbol_type<0> = [Number,336,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 337; @position = 18; @symbol_constdef = [background,337,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 340; @symbol_moduledef = [confirmation_icon_light__hint_confirm,340,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 340; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 341; @position = 18; @symbol_constdef = [filename,341,18,26]; @symbol_type<0> = [String,341,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 342; @position = 18; @symbol_constdef = [disableTransparency,342,18,37]; @symbol_type<0> = [Boolean,342,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 343; @position = 18; @symbol_constdef = [dithering,343,18,27]; @symbol_type<0> = [String,343,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 344; @position = 18; @symbol_constdef = [automaticPalette,344,18,34]; @symbol_type<0> = [Boolean,344,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 347; @symbol_moduledef = [prompt_color_dark__title,347,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 347; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 349 18 ]
+                symbol [ Graphics %tmp.36 349 31 39 ];
+                %tmp.36 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.37 349 40 57 ];
+                %tmp.37 = getv %tmp.36 :COLOR_TRANSPARENT;
+                putv self :background %tmp.37;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [color,348,18,23]; @symbol_type<0> = [Number,348,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [background,349,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 352; @symbol_moduledef = [system_icon_destructive__cancel,352,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 352; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 353; @position = 18; @symbol_constdef = [filename,353,18,26]; @symbol_type<0> = [String,353,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__cancel.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 354; @position = 18; @symbol_constdef = [disableTransparency,354,18,37]; @symbol_type<0> = [Boolean,354,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 355; @position = 18; @symbol_constdef = [dithering,355,18,27]; @symbol_type<0> = [String,355,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 356; @position = 18; @symbol_constdef = [automaticPalette,356,18,34]; @symbol_type<0> = [Boolean,356,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 359; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,359,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 359; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 360; @position = 18; @symbol_constdef = [exclude,360,18,25]; @symbol_type<0> = [Boolean,360,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 363; @symbol_moduledef = [prompt_loc__title,363,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 363; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 364; @position = 18; @symbol_constdef = [x,364,18,19]; @symbol_type<0> = [Number,364,23,29]; ]
+            const x as Number = 25;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 365; @position = 18; @symbol_constdef = [y,365,18,19]; @symbol_type<0> = [Number,365,23,29]; ]
+            const y as Number = 9;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 368; @symbol_moduledef = [confirmation_font_enhanced_readability__body,368,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 368; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 369; @position = 18; @symbol_constdef = [exclude,369,18,25]; @symbol_type<0> = [Boolean,369,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 372; @symbol_moduledef = [prompt_color_light__title,372,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 372; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 374 18 ]
+                symbol [ Graphics %tmp.38 374 31 39 ];
+                %tmp.38 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.39 374 40 57 ];
+                %tmp.39 = getv %tmp.38 :COLOR_TRANSPARENT;
+                putv self :background %tmp.39;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 373; @position = 18; @symbol_constdef = [color,373,18,23]; @symbol_type<0> = [Number,373,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 374; @position = 18; @symbol_constdef = [background,374,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 377; @symbol_moduledef = [system_icon_dark__hint_button_right_top,377,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 377; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [filename,378,18,26]; @symbol_type<0> = [String,378,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__hint_button_right_top.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 379; @position = 18; @symbol_constdef = [disableTransparency,379,18,37]; @symbol_type<0> = [Boolean,379,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 380; @position = 18; @symbol_constdef = [dithering,380,18,27]; @symbol_type<0> = [String,380,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 381; @position = 18; @symbol_constdef = [automaticPalette,381,18,34]; @symbol_type<0> = [Boolean,381,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 384; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,384,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 384; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 385; @position = 18; @symbol_constdef = [exclude,385,18,25]; @symbol_type<0> = [Boolean,385,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 388; @symbol_moduledef = [confirmation_icon_dark__hint_keep,388,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 388; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 389; @position = 18; @symbol_constdef = [filename,389,18,26]; @symbol_type<0> = [String,389,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_keep.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 390; @position = 18; @symbol_constdef = [disableTransparency,390,18,37]; @symbol_type<0> = [Boolean,390,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 391; @position = 18; @symbol_constdef = [dithering,391,18,27]; @symbol_type<0> = [String,391,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [automaticPalette,392,18,34]; @symbol_type<0> = [Boolean,392,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 395; @symbol_moduledef = [system_icon_light__cancel,395,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 395; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 396; @position = 18; @symbol_constdef = [filename,396,18,26]; @symbol_type<0> = [String,396,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__cancel.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 397; @position = 18; @symbol_constdef = [disableTransparency,397,18,37]; @symbol_type<0> = [Boolean,397,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [dithering,398,18,27]; @symbol_type<0> = [String,398,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 399; @position = 18; @symbol_constdef = [automaticPalette,399,18,34]; @symbol_type<0> = [Boolean,399,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 402; @symbol_moduledef = [confirmation_icon_light__hint_reject,402,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 402; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 403; @position = 18; @symbol_constdef = [filename,403,18,26]; @symbol_type<0> = [String,403,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 404; @position = 18; @symbol_constdef = [disableTransparency,404,18,37]; @symbol_type<0> = [Boolean,404,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 405; @position = 18; @symbol_constdef = [dithering,405,18,27]; @symbol_type<0> = [String,405,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 406; @position = 18; @symbol_constdef = [automaticPalette,406,18,34]; @symbol_type<0> = [Boolean,406,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 409; @symbol_moduledef = [system_icon_light__about,409,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 409; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 410; @position = 18; @symbol_constdef = [filename,410,18,26]; @symbol_type<0> = [String,410,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__about.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 411; @position = 18; @symbol_constdef = [disableTransparency,411,18,37]; @symbol_type<0> = [Boolean,411,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 412; @position = 18; @symbol_constdef = [dithering,412,18,27]; @symbol_type<0> = [String,412,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 413; @position = 18; @symbol_constdef = [automaticPalette,413,18,34]; @symbol_type<0> = [Boolean,413,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 416; @symbol_moduledef = [system_size__toast_icon,416,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 416; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 417; @position = 18; @symbol_constdef = [width,417,18,23]; @symbol_type<0> = [Number,417,27,33]; ]
+            const width as Number = 44;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 418; @position = 18; @symbol_constdef = [scaleRelativeTo,418,18,33]; @symbol_type<0> = [String,418,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 421; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,421,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 421; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 422; @position = 18; @symbol_constdef = [exclude,422,18,25]; @symbol_type<0> = [Boolean,422,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 425; @symbol_moduledef = [confirmation_icon__hint_reject,425,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 425; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 426; @position = 18; @symbol_constdef = [filename,426,18,26]; @symbol_type<0> = [String,426,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_reject.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 427; @position = 18; @symbol_constdef = [disableTransparency,427,18,37]; @symbol_type<0> = [Boolean,427,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 428; @position = 18; @symbol_constdef = [dithering,428,18,27]; @symbol_type<0> = [String,428,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 429; @position = 18; @symbol_constdef = [automaticPalette,429,18,34]; @symbol_type<0> = [Boolean,429,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 432; @symbol_moduledef = [system_icon_light__hint_action_menu,432,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 432; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 433; @position = 18; @symbol_constdef = [filename,433,18,26]; @symbol_type<0> = [String,433,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 434; @position = 18; @symbol_constdef = [disableTransparency,434,18,37]; @symbol_type<0> = [Boolean,434,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 435; @position = 18; @symbol_constdef = [dithering,435,18,27]; @symbol_type<0> = [String,435,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [automaticPalette,436,18,34]; @symbol_type<0> = [Boolean,436,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 439; @symbol_moduledef = [system_icon_light__hint_button_right_middle,439,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 439; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 440; @position = 18; @symbol_constdef = [exclude,440,18,25]; @symbol_type<0> = [Boolean,440,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 443; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,443,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 443; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 444; @position = 18; @symbol_constdef = [exclude,444,18,25]; @symbol_type<0> = [Boolean,444,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 447; @symbol_moduledef = [confirmation_loc__hint_reject,447,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 447; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [x,448,18,19]; @symbol_type<0> = [Number,448,23,29]; ]
+            const x as Number = 0;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 449; @position = 18; @symbol_constdef = [y,449,18,19]; @symbol_type<0> = [Number,449,23,29]; ]
+            const y as Number = 138;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 452; @symbol_moduledef = [confirmation_icon_dark__hint_delete,452,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 452; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 453; @position = 18; @symbol_constdef = [filename,453,18,26]; @symbol_type<0> = [String,453,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 454; @position = 18; @symbol_constdef = [disableTransparency,454,18,37]; @symbol_type<0> = [Boolean,454,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 455; @position = 18; @symbol_constdef = [dithering,455,18,27]; @symbol_type<0> = [String,455,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [automaticPalette,456,18,34]; @symbol_type<0> = [Boolean,456,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 459; @symbol_moduledef = [activity_color_dark__background,459,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 459; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 460; @position = 18; @symbol_constdef = [color,460,18,23]; @symbol_type<0> = [Number,460,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 461; @position = 18; @symbol_constdef = [background,461,18,28]; @symbol_type<0> = [Number,461,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 464; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,464,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 464; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 465; @position = 18; @symbol_constdef = [exclude,465,18,25]; @symbol_type<0> = [Boolean,465,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 468; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,468,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 468; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 469; @position = 18; @symbol_constdef = [exclude,469,18,25]; @symbol_type<0> = [Boolean,469,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 472; @symbol_moduledef = [system_size__menu_icon,472,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 472; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 473; @position = 18; @symbol_constdef = [scaleX,473,18,24]; @symbol_type<0> = [Number,473,28,34]; ]
+            const scaleX as Number = 38;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 474; @position = 18; @symbol_constdef = [scaleY,474,18,24]; @symbol_type<0> = [Number,474,28,34]; ]
+            const scaleY as Number = 38;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 475; @position = 18; @symbol_constdef = [scaleRelativeTo,475,18,33]; @symbol_type<0> = [String,475,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 478; @symbol_moduledef = [system_icon_destructive__warning,478,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 478; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 479; @position = 18; @symbol_constdef = [filename,479,18,26]; @symbol_type<0> = [String,479,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__warning.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 480; @position = 18; @symbol_constdef = [disableTransparency,480,18,37]; @symbol_type<0> = [Boolean,480,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 481; @position = 18; @symbol_constdef = [dithering,481,18,27]; @symbol_type<0> = [String,481,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 482; @position = 18; @symbol_constdef = [automaticPalette,482,18,34]; @symbol_type<0> = [Boolean,482,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 485; @symbol_moduledef = [system_loc__hint_button_right_middle,485,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 485; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 486; @position = 18; @symbol_constdef = [exclude,486,18,25]; @symbol_type<0> = [Boolean,486,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 489; @symbol_moduledef = [system_icon_dark__cancel,489,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 489; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 490; @position = 18; @symbol_constdef = [filename,490,18,26]; @symbol_type<0> = [String,490,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__cancel.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 491; @position = 18; @symbol_constdef = [disableTransparency,491,18,37]; @symbol_type<0> = [Boolean,491,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 492; @position = 18; @symbol_constdef = [dithering,492,18,27]; @symbol_type<0> = [String,492,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 493; @position = 18; @symbol_constdef = [automaticPalette,493,18,34]; @symbol_type<0> = [Boolean,493,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 496; @symbol_moduledef = [prompt_size__body_with_title,496,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 496; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 497; @position = 18; @symbol_constdef = [width,497,18,23]; @symbol_type<0> = [Number,497,27,33]; ]
+            const width as Number = 166;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 498; @position = 18; @symbol_constdef = [height,498,18,24]; @symbol_type<0> = [Number,498,28,34]; ]
+            const height as Number = 99;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 501; @symbol_moduledef = [system_loc__hint_button_right_top,501,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 501; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 502; @position = 18; @symbol_constdef = [x,502,18,19]; @symbol_type<0> = [Number,502,23,29]; ]
+            const x as Number = 166;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 503; @position = 18; @symbol_constdef = [y,503,18,19]; @symbol_type<0> = [Number,503,23,29]; ]
+            const y as Number = 31;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [horizontalJustification,504,18,41]; @symbol_type<0> = [String,504,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 505; @position = 18; @symbol_constdef = [verticalJustification,505,18,39]; @symbol_type<0> = [String,505,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 508; @symbol_moduledef = [system_color_light__text,508,15,39]; ]
+        module system_color_light__text {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 508; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 510 18 ]
+                symbol [ Graphics %tmp.40 510 31 39 ];
+                %tmp.40 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.41 510 40 57 ];
+                %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
+                putv self :background %tmp.41;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [color,509,18,23]; @symbol_type<0> = [Number,509,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 510; @position = 18; @symbol_constdef = [background,510,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 513; @symbol_moduledef = [system_icon_light__check,513,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 513; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [filename,514,18,26]; @symbol_type<0> = [String,514,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__check.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [disableTransparency,515,18,37]; @symbol_type<0> = [Boolean,515,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 516; @position = 18; @symbol_constdef = [dithering,516,18,27]; @symbol_type<0> = [String,516,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 517; @position = 18; @symbol_constdef = [automaticPalette,517,18,34]; @symbol_type<0> = [Boolean,517,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 520; @symbol_moduledef = [confirmation_input__reject,520,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 520; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 521 18 ]
+                symbol [ WatchUi %tmp.42 521 27 34 ];
+                %tmp.42 = getm $.Toybox.WatchUi;
+                symbol [ KEY_DOWN %tmp.43 521 35 43 ];
+                %tmp.43 = getv %tmp.42 :KEY_DOWN;
+                putv self :button %tmp.43;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 521; @position = 18; @symbol_constdef = [button,521,18,24]; ]
+            const button;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 524; @symbol_moduledef = [system_icon_light__revert,524,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 524; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 525; @position = 18; @symbol_constdef = [filename,525,18,26]; @symbol_type<0> = [String,525,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__revert.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [disableTransparency,526,18,37]; @symbol_type<0> = [Boolean,526,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [dithering,527,18,27]; @symbol_type<0> = [String,527,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 528; @position = 18; @symbol_constdef = [automaticPalette,528,18,34]; @symbol_type<0> = [Boolean,528,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 531; @symbol_moduledef = [system_size__subwindow,531,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 531; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 532; @position = 18; @symbol_constdef = [width,532,18,23]; @symbol_type<0> = [Number,532,27,33]; ]
+            const width as Number = 62;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 533; @position = 18; @symbol_constdef = [height,533,18,24]; @symbol_type<0> = [Number,533,28,34]; ]
+            const height as Number = 62;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 536; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,536,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 536; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 537; @position = 18; @symbol_constdef = [exclude,537,18,25]; @symbol_type<0> = [Boolean,537,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 540; @symbol_moduledef = [system_icon_dark__check,540,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 540; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 541; @position = 18; @symbol_constdef = [filename,541,18,26]; @symbol_type<0> = [String,541,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__check.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [disableTransparency,542,18,37]; @symbol_type<0> = [Boolean,542,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 543; @position = 18; @symbol_constdef = [dithering,543,18,27]; @symbol_type<0> = [String,543,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 544; @position = 18; @symbol_constdef = [automaticPalette,544,18,34]; @symbol_type<0> = [Boolean,544,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 547; @symbol_moduledef = [confirmation_loc__hint_keep,547,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 547; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 548; @position = 18; @symbol_constdef = [x,548,18,19]; @symbol_type<0> = [Number,548,23,29]; ]
+            const x as Number = 0;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 549; @position = 18; @symbol_constdef = [y,549,18,19]; @symbol_type<0> = [Number,549,23,29]; ]
+            const y as Number = 138;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 552; @symbol_moduledef = [confirmation_loc__hint_delete,552,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 552; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 553; @position = 18; @symbol_constdef = [verticallJustification,553,18,40]; @symbol_type<0> = [String,553,44,50]; ]
+            const verticallJustification as String = "center";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 554; @position = 18; @symbol_constdef = [x,554,18,19]; @symbol_type<0> = [Number,554,23,29]; ]
+            const x as Number = 146;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 555; @position = 18; @symbol_constdef = [y,555,18,19]; @symbol_type<0> = [Number,555,23,29]; ]
+            const y as Number = 15;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [horizontalJustification,556,18,41]; @symbol_type<0> = [String,556,45,51]; ]
+            const horizontalJustification as String = "center";
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 559; @symbol_moduledef = [system_icon_positive__hint_action_menu,559,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 559; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [filename,560,18,26]; @symbol_type<0> = [String,560,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_positive__hint_button_right_top.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 561; @position = 18; @symbol_constdef = [disableTransparency,561,18,37]; @symbol_type<0> = [Boolean,561,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 562; @position = 18; @symbol_constdef = [dithering,562,18,27]; @symbol_type<0> = [String,562,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 563; @position = 18; @symbol_constdef = [automaticPalette,563,18,34]; @symbol_type<0> = [Boolean,563,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 566; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,566,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 566; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 567; @position = 18; @symbol_constdef = [exclude,567,18,25]; @symbol_type<0> = [Boolean,567,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 570; @symbol_moduledef = [system_icon_light__hint_button_left_middle,570,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 570; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 571; @position = 18; @symbol_constdef = [exclude,571,18,25]; @symbol_type<0> = [Boolean,571,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 574; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,574,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 574; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 575; @position = 18; @symbol_constdef = [exclude,575,18,25]; @symbol_type<0> = [Boolean,575,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 578; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,578,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 578; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 579; @position = 18; @symbol_constdef = [exclude,579,18,25]; @symbol_type<0> = [Boolean,579,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 582; @symbol_moduledef = [system_icon_dark__revert,582,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 582; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 583; @position = 18; @symbol_constdef = [filename,583,18,26]; @symbol_type<0> = [String,583,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__revert.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 584; @position = 18; @symbol_constdef = [disableTransparency,584,18,37]; @symbol_type<0> = [Boolean,584,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 585; @position = 18; @symbol_constdef = [dithering,585,18,27]; @symbol_type<0> = [String,585,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 586; @position = 18; @symbol_constdef = [automaticPalette,586,18,34]; @symbol_type<0> = [Boolean,586,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 589; @symbol_moduledef = [confirmation_icon_light__hint_delete,589,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 589; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 590; @position = 18; @symbol_constdef = [filename,590,18,26]; @symbol_type<0> = [String,590,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 591; @position = 18; @symbol_constdef = [disableTransparency,591,18,37]; @symbol_type<0> = [Boolean,591,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 592; @position = 18; @symbol_constdef = [dithering,592,18,27]; @symbol_type<0> = [String,592,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 593; @position = 18; @symbol_constdef = [automaticPalette,593,18,34]; @symbol_type<0> = [Boolean,593,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 596; @symbol_moduledef = [system_icon_dark__question,596,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 596; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 597; @position = 18; @symbol_constdef = [filename,597,18,26]; @symbol_type<0> = [String,597,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__question.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 598; @position = 18; @symbol_constdef = [disableTransparency,598,18,37]; @symbol_type<0> = [Boolean,598,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 599; @position = 18; @symbol_constdef = [dithering,599,18,27]; @symbol_type<0> = [String,599,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 600; @position = 18; @symbol_constdef = [automaticPalette,600,18,34]; @symbol_type<0> = [Boolean,600,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 603; @symbol_moduledef = [system_icon_light__discard,603,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 603; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [filename,604,18,26]; @symbol_type<0> = [String,604,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__discard.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 605; @position = 18; @symbol_constdef = [disableTransparency,605,18,37]; @symbol_type<0> = [Boolean,605,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 606; @position = 18; @symbol_constdef = [dithering,606,18,27]; @symbol_type<0> = [String,606,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 607; @position = 18; @symbol_constdef = [automaticPalette,607,18,34]; @symbol_type<0> = [Boolean,607,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 610; @symbol_moduledef = [device_info,610,15,26]; ]
+        module device_info {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 610; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 612 18 ]
+                symbol [ Toybox %tmp.45 612 32 38 ];
+                %tmp.45 = getv ? :Toybox;
+                symbol [ System %tmp.46 612 39 45 ];
+                %tmp.46 = getv %tmp.45 :System;
+                symbol [ SCREEN_SHAPE_SEMI_OCTAGON %tmp.47 612 46 71 ];
+                %tmp.47 = getv %tmp.46 :SCREEN_SHAPE_SEMI_OCTAGON;
+                putv self :screenShape %tmp.47;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 611; @position = 18; @symbol_constdef = [screenWidth,611,18,29]; @symbol_type<0> = [Number,611,33,39]; ]
+            const screenWidth as Number = 176;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [screenShape,612,18,29]; ]
+            const screenShape;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [hasNightMode,613,18,30]; @symbol_type<0> = [Boolean,613,34,41]; ]
+            const hasNightMode as Boolean = false;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [hasGpu,614,18,24]; @symbol_type<0> = [Boolean,614,28,35]; ]
+            const hasGpu as Boolean = false;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 615; @position = 18; @symbol_constdef = [screenHeight,615,18,30]; @symbol_type<0> = [Number,615,34,40]; ]
+            const screenHeight as Number = 176;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 616; @position = 18; @symbol_constdef = [hasTouchScreen,616,18,32]; @symbol_type<0> = [Boolean,616,36,43]; ]
+            const hasTouchScreen as Boolean = false;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 617; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,617,18,44]; @symbol_type<0> = [Boolean,617,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 620; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,620,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 620; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [filename,621,18,26]; @symbol_type<0> = [String,621,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_completion.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 622; @position = 18; @symbol_constdef = [disableTransparency,622,18,37]; @symbol_type<0> = [Boolean,622,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 623; @position = 18; @symbol_constdef = [dithering,623,18,27]; @symbol_type<0> = [String,623,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 624; @position = 18; @symbol_constdef = [automaticPalette,624,18,34]; @symbol_type<0> = [Boolean,624,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 627; @symbol_moduledef = [prompt_font__body_no_title,627,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 627; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 628 18 ]
+                symbol [ Graphics %tmp.48 628 34 42 ];
+                %tmp.48 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.49 628 43 62 ];
+                %tmp.49 = getv %tmp.48 :TEXT_JUSTIFY_CENTER;
+                putv self :justification %tmp.49;
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 629 18 ]
+                symbol [ Graphics %tmp.50 629 25 33 ];
+                %tmp.50 = getm $.Toybox.Graphics;
+                symbol [ FONT_TINY %tmp.51 629 34 43 ];
+                %tmp.51 = getv %tmp.50 :FONT_TINY;
+                putv self :font %tmp.51;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 628; @position = 18; @symbol_constdef = [justification,628,18,31]; ]
+            const justification;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 629; @position = 18; @symbol_constdef = [font,629,18,22]; ]
+            const font;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 632; @symbol_moduledef = [prompt_size__title_icon,632,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 632; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 633; @position = 18; @symbol_constdef = [scaleX,633,18,24]; @symbol_type<0> = [Number,633,28,34]; ]
+            const scaleX as Number = 38;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 634; @position = 18; @symbol_constdef = [scaleY,634,18,24]; @symbol_type<0> = [Number,634,28,34]; ]
+            const scaleY as Number = 38;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 635; @position = 18; @symbol_constdef = [scaleRelativeTo,635,18,33]; @symbol_type<0> = [String,635,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 638; @symbol_moduledef = [system_icon_dark__warning,638,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 638; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 639; @position = 18; @symbol_constdef = [filename,639,18,26]; @symbol_type<0> = [String,639,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__warning.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 640; @position = 18; @symbol_constdef = [disableTransparency,640,18,37]; @symbol_type<0> = [Boolean,640,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 641; @position = 18; @symbol_constdef = [dithering,641,18,27]; @symbol_type<0> = [String,641,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 642; @position = 18; @symbol_constdef = [automaticPalette,642,18,34]; @symbol_type<0> = [Boolean,642,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 645; @symbol_moduledef = [prompt_loc__title_icon,645,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 645; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 646; @position = 18; @symbol_constdef = [x,646,18,19]; @symbol_type<0> = [Number,646,23,29]; ]
+            const x as Number = 145;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 647; @position = 18; @symbol_constdef = [y,647,18,19]; @symbol_type<0> = [Number,647,23,29]; ]
+            const y as Number = 31;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 648; @position = 18; @symbol_constdef = [horizontalJustification,648,18,41]; @symbol_type<0> = [String,648,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 649; @position = 18; @symbol_constdef = [verticalJustification,649,18,39]; @symbol_type<0> = [String,649,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 652; @symbol_moduledef = [prompt_font_enhanced_readability__title,652,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 652; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 653; @position = 18; @symbol_constdef = [exclude,653,18,25]; @symbol_type<0> = [Boolean,653,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 656; @symbol_moduledef = [prompt_color_dark__body,656,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 656; ]
+            <init> {
+[ "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen" 658 18 ]
+                symbol [ Graphics %tmp.52 658 31 39 ];
+                %tmp.52 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.53 658 40 57 ];
+                %tmp.53 = getv %tmp.52 :COLOR_TRANSPARENT;
+                putv self :background %tmp.53;
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 657; @position = 18; @symbol_constdef = [color,657,18,23]; @symbol_type<0> = [Number,657,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 658; @position = 18; @symbol_constdef = [background,658,18,28]; ]
+            const background;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 661; @symbol_moduledef = [confirmation_icon__hint_delete,661,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 661; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 662; @position = 18; @symbol_constdef = [filename,662,18,26]; @symbol_type<0> = [String,662,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\confirmation_icon__hint_delete.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 663; @position = 18; @symbol_constdef = [disableTransparency,663,18,37]; @symbol_type<0> = [Boolean,663,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 664; @position = 18; @symbol_constdef = [dithering,664,18,27]; @symbol_type<0> = [String,664,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 665; @position = 18; @symbol_constdef = [automaticPalette,665,18,34]; @symbol_type<0> = [Boolean,665,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 668; @symbol_moduledef = [system_icon_light__hint_button_right_top,668,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 668; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 669; @position = 18; @symbol_constdef = [filename,669,18,26]; @symbol_type<0> = [String,669,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_light__hint_button_right_top.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 670; @position = 18; @symbol_constdef = [disableTransparency,670,18,37]; @symbol_type<0> = [Boolean,670,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 671; @position = 18; @symbol_constdef = [dithering,671,18,27]; @symbol_type<0> = [String,671,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 672; @position = 18; @symbol_constdef = [automaticPalette,672,18,34]; @symbol_type<0> = [Boolean,672,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 675; @symbol_moduledef = [confirmation_size__body,675,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 675; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 676; @position = 18; @symbol_constdef = [width,676,18,23]; @symbol_type<0> = [Number,676,27,33]; ]
+            const width as Number = 173;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 677; @position = 18; @symbol_constdef = [height,677,18,24]; @symbol_type<0> = [Number,677,28,34]; ]
+            const height as Number = 63;
+        }
+        [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 680; @symbol_moduledef = [system_icon_positive__check,680,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 680; ]
+            <init> {
+            }
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 681; @position = 18; @symbol_constdef = [filename,681,18,26]; @symbol_type<0> = [String,681,30,36]; ]
+            const filename as String = "C:\\Users\\g.gambino\\AppData\\Roaming\\Garmin\\ConnectIQ\\Devices\\instinct3solar45mm\\system_icon_dark__check.svg";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 682; @position = 18; @symbol_constdef = [disableTransparency,682,18,37]; @symbol_type<0> = [Boolean,682,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 683; @position = 18; @symbol_constdef = [dithering,683,18,27]; @symbol_type<0> = [String,683,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 684; @position = 18; @symbol_constdef = [automaticPalette,684,18,34]; @symbol_type<0> = [Boolean,684,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+    }
+}
+[ @file = "c:\yt-dlp\garmin\decisioninja-garmin\bin\gen\006-B4585-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}
