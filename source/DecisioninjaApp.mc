@@ -286,11 +286,33 @@ class PointerDelegate extends WatchUi.BehaviorDelegate {
 
 class BinaryIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
+
     function draw(dc) {
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT); dc.setPenWidth(4);
-        var cx = dc.getWidth()/2; var cy = dc.getHeight()/2;
-        dc.drawLine(cx, cy + 12, cx, cy); dc.drawLine(cx, cy, cx - 12, cy - 12); dc.drawLine(cx, cy, cx + 12, cy - 12);
+        // 1. Clear background for the circular sub-window
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.clear();
+        
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(2);
+        
+        var cx = dc.getWidth() / 2;
+        var cy = dc.getHeight() / 2;
+        
+        // 2. Draw the vertical divider line (the 7.5 1V14 path)
+        dc.drawLine(cx, cy - 12, cx, cy + 12);
+        
+        // 3. Draw the "A" on the left
+        // Left leg, right leg, and crossbar
+        dc.drawLine(cx - 10, cy + 8, cx - 6, cy - 8); 
+        dc.drawLine(cx - 2, cy + 8, cx - 6, cy - 8);
+        dc.drawLine(cx - 8, cy + 2, cx - 4, cy + 2);
+        
+        // 4. Draw the "B" on the right
+        // Vertical spine
+        dc.drawLine(cx + 3, cy - 8, cx + 3, cy + 8);
+        // Top loop and bottom loop
+        dc.drawArc(cx + 3, cy - 4, 4, Graphics.ARC_CLOCKWISE, 90, 270);
+        dc.drawArc(cx + 3, cy + 4, 4, Graphics.ARC_CLOCKWISE, 90, 270);
     }
 }
 
