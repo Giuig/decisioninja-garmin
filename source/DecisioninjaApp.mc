@@ -15,10 +15,12 @@ class DecisioninjaApp extends Application.AppBase {
 
     function getInitialView() {
         var menu = new WatchUi.Menu2({:title=>"Decisioninja"});
-        menu.addItem(new WatchUi.MenuItem("Binary", getBinLabel(), "id_binary", {:icon => new BinaryIcon()}));
-        menu.addItem(new WatchUi.MenuItem("Dice", getDiceLabel(), "id_dice", {:icon => new DiceIcon()}));
-        menu.addItem(new WatchUi.MenuItem("Pointer", "Random Direction", "id_pointer", {:icon => new PointerIcon()}));
-        menu.addItem(new WatchUi.MenuItem("Settings", "Setup App", "id_settings", {:icon => new SettingsIcon()}));
+        
+        // Main Menu Items with static English descriptions
+        menu.addItem(new WatchUi.MenuItem("Binary", "Pick between two", "id_binary", {:icon => new BinaryIcon()}));
+        menu.addItem(new WatchUi.MenuItem("Dice", "Roll the dice", "id_dice", {:icon => new DiceIcon()}));
+        menu.addItem(new WatchUi.MenuItem("Pointer", "Random direction", "id_pointer", {:icon => new PointerIcon()}));
+        menu.addItem(new WatchUi.MenuItem("Settings", "Configure app", "id_settings", {:icon => new GearIcon()}));
         
         return [ menu, new MyMenuDelegate(self) ];
     }
@@ -27,19 +29,16 @@ class DecisioninjaApp extends Application.AppBase {
         var labels = ["YES / NO", "LEFT / RIGHT", "HEADS / TAILS"];
         return labels[binaryMode];
     }
-
-    function getDiceLabel() {
-        return diceCount.toString() + " x D" + diceType.toString();
-    }
 }
 
-// --- 2. DELEGATE MENU PRINCIPALE ---
+// --- 2. MAIN MENU DELEGATE ---
 class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
     var app;
     function initialize(a) { Menu2InputDelegate.initialize(); app = a; }
 
     function onSelect(item) {
         var id = item.getId();
+
         if (id.equals("id_binary")) {
             var bView = new BinaryView(app.binaryMode);
             WatchUi.pushView(bView, new BinaryDelegate(bView), WatchUi.SLIDE_LEFT);
@@ -51,16 +50,17 @@ class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
             WatchUi.pushView(pView, new PointerDelegate(pView), WatchUi.SLIDE_LEFT);
         } else if (id.equals("id_settings")) {
             var sMenu = new WatchUi.Menu2({:title=>"Settings"});
-            sMenu.addItem(new WatchUi.MenuItem("Binary Mode", app.getBinLabel(), "set_bin", null));
-            sMenu.addItem(new WatchUi.MenuItem("Dice Count", app.diceCount.toString(), "set_count", null));
-            sMenu.addItem(new WatchUi.MenuItem("Dice Type", "D" + app.diceType.toString(), "set_type", null));
+            // Use gear icon for all settings rows
+            sMenu.addItem(new WatchUi.MenuItem("Binary Mode", app.getBinLabel(), "set_bin", {:icon => new GearIcon()}));
+            sMenu.addItem(new WatchUi.MenuItem("Dice Count", app.diceCount.toString() + " Dice", "set_count", {:icon => new GearIcon()}));
+            sMenu.addItem(new WatchUi.MenuItem("Dice Type", "D" + app.diceType.toString(), "set_type", {:icon => new GearIcon()}));
             WatchUi.pushView(sMenu, new SettingsDelegate(app), WatchUi.SLIDE_UP);
         }
     }
     function onBack() { System.exit(); }
 }
 
-// --- 3. DELEGATE SETTINGS ---
+// --- 3. SETTINGS DELEGATE ---
 class SettingsDelegate extends WatchUi.Menu2InputDelegate {
     var app;
     function initialize(a) { Menu2InputDelegate.initialize(); app = a; }
@@ -68,17 +68,18 @@ class SettingsDelegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item) {
         var id = item.getId();
         var subMenu = new WatchUi.Menu2({:title=>item.getLabel()});
+
         if (id.equals("set_bin")) {
-            subMenu.addItem(new WatchUi.MenuItem("YES / NO", "", 0, null));
-            subMenu.addItem(new WatchUi.MenuItem("LEFT / RIGHT", "", 1, null));
-            subMenu.addItem(new WatchUi.MenuItem("HEADS / TAILS", "", 2, null));
+            subMenu.addItem(new WatchUi.MenuItem("YES / NO", "", 0, {:icon => new GearIcon()}));
+            subMenu.addItem(new WatchUi.MenuItem("LEFT / RIGHT", "", 1, {:icon => new GearIcon()}));
+            subMenu.addItem(new WatchUi.MenuItem("HEADS / TAILS", "", 2, {:icon => new GearIcon()}));
         } else if (id.equals("set_count")) {
-            subMenu.addItem(new WatchUi.MenuItem("1 Die", "", 1, null));
-            subMenu.addItem(new WatchUi.MenuItem("2 Dice", "", 2, null));
+            subMenu.addItem(new WatchUi.MenuItem("1 Die", "", 1, {:icon => new GearIcon()}));
+            subMenu.addItem(new WatchUi.MenuItem("2 Dice", "", 2, {:icon => new GearIcon()}));
         } else if (id.equals("set_type")) {
             var types = [4, 6, 8, 10, 12, 20];
             for(var i=0; i<types.size(); i++) {
-                subMenu.addItem(new WatchUi.MenuItem("D" + types[i], "", types[i], null));
+                subMenu.addItem(new WatchUi.MenuItem("D" + types[i], "", types[i], {:icon => new GearIcon()}));
             }
         }
         WatchUi.pushView(subMenu, new ApplySettingsDelegate(app, id, item), WatchUi.SLIDE_LEFT);
@@ -91,13 +92,13 @@ class ApplySettingsDelegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item) {
         var val = item.getId();
         if (type.equals("set_bin")) { app.binaryMode = val; settingItem.setSubLabel(app.getBinLabel()); }
-        else if (type.equals("set_count")) { app.diceCount = val; settingItem.setSubLabel(val.toString()); }
+        else if (type.equals("set_count")) { app.diceCount = val; settingItem.setSubLabel(val.toString() + " Dice"); }
         else if (type.equals("set_type")) { app.diceType = val; settingItem.setSubLabel("D" + val.toString()); }
         WatchUi.popView(WatchUi.SLIDE_RIGHT);
     }
 }
 
-// --- 4. VISTA BINARY ---
+// --- 4. BINARY VIEW ---
 class BinaryView extends WatchUi.View {
     var resultText = "???";
     var isSpinning = false;
@@ -130,6 +131,7 @@ class BinaryView extends WatchUi.View {
     function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
+        
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28); 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -152,7 +154,7 @@ class BinaryDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() { if (!view.isSpinning) { view.generateDecision(); } return true; }
 }
 
-// --- 5. VISTA DADI ---
+// --- 5. DICE VIEW ---
 class DiceView extends WatchUi.View {
     var diceValues = [0, 0];
     var isSpinning = false;
@@ -182,6 +184,7 @@ class DiceView extends WatchUi.View {
     function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
+        
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -214,7 +217,7 @@ class DiceDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() { if (!view.isSpinning) { view.rollDice(); } return true; }
 }
 
-// --- 6. VISTA PUNTATORE (STILE BUSSOLA MILITARE) ---
+// --- 6. POINTER VIEW ---
 class PointerView extends WatchUi.View {
     var angle = 0;
     var isSpinning = false;
@@ -241,6 +244,7 @@ class PointerView extends WatchUi.View {
     function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
+        
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -254,29 +258,16 @@ class PointerView extends WatchUi.View {
             dc.drawText(cx, cy, Graphics.FONT_MEDIUM, "SCANNING...", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         } else {
             var rad = (angle - 90) * (Math.PI / 180);
-            var length = 55; // Lunghezza totale sicura per oblò
-            var width = 18;  // Larghezza base ago
-            
-            // Punti Punta (Piena)
-            var p1x = cx + length * Math.cos(rad);
-            var p1y = cy + length * Math.sin(rad);
-            var p2x = cx + width * Math.cos(rad + Math.PI/2);
-            var p2y = cy + width * Math.sin(rad + Math.PI/2);
-            var p3x = cx + width * Math.cos(rad - Math.PI/2);
-            var p3y = cy + width * Math.sin(rad - Math.PI/2);
-            
-            // Punti Coda (Vuota/Outline)
-            var c1x = cx + length * Math.cos(rad + Math.PI);
-            var c1y = cy + length * Math.sin(rad + Math.PI);
+            var length = 35; 
+            var px = cx + length * Math.cos(rad);
+            var py = cy + length * Math.sin(rad);
+            var baseWidth = 12;
+            var bx1 = cx + baseWidth * Math.cos(rad + Math.PI/2);
+            var by1 = cy + baseWidth * Math.sin(rad + Math.PI/2);
+            var bx2 = cx + baseWidth * Math.cos(rad - Math.PI/2);
+            var by2 = cy + baseWidth * Math.sin(rad - Math.PI/2);
 
-            // Disegna ago pieno (Punta)
-            dc.fillPolygon([[p1x, p1y], [p2x, p2y], [p3x, p3y]]);
-            
-            // Disegna ago vuoto (Coda)
-            dc.setPenWidth(2);
-            dc.drawLine(p2x, p2y, c1x, c1y);
-            dc.drawLine(p3x, p3y, c1x, c1y);
-
+            dc.fillPolygon([[px, py], [bx1, by1], [bx2, by2]]);
             dc.drawText(cx, dc.getHeight() - 35, Graphics.FONT_XTINY, "GPS TO RETRY", Graphics.TEXT_JUSTIFY_CENTER);
         }
     }
@@ -288,7 +279,7 @@ class PointerDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() { if (!view.isSpinning) { view.spin(); } return true; }
 }
 
-// --- 7. ICONE ---
+// --- 7. HAND-DRAWN DRAWABLE ICONS ---
 class BinaryIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
     function draw(dc) {
@@ -319,16 +310,30 @@ class PointerIcon extends WatchUi.Drawable {
     }
 }
 
-class SettingsIcon extends WatchUi.Drawable {
+class GearIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
     function draw(dc) {
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT); dc.setPenWidth(3);
-        var cx = dc.getWidth()/2; var cy = dc.getHeight()/2;
-        dc.drawCircle(cx, cy, 15); dc.drawCircle(cx, cy, 5);
-        for (var i = 0; i < 8; i++) {
-            var ang = i * Math.PI / 4;
-            dc.drawLine(cx + 11 * Math.cos(ang), cy + 11 * Math.sin(ang), cx + 16 * Math.cos(ang), cy + 16 * Math.sin(ang));
+        // Riempiamo lo sfondo dell'oblò di bianco
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.clear();
+        
+        // Disegniamo l'ingranaggio nero
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(2);
+        
+        var cx = dc.getWidth() / 2;
+        var cy = dc.getHeight() / 2;
+        
+        // Corpo dell'ingranaggio
+        dc.drawCircle(cx, cy, 10);
+        dc.drawCircle(cx, cy, 4); // Foro centrale
+        
+        // 6 Denti (stile nativo Garmin)
+        for (var i = 0; i < 6; i++) {
+            var ang = i * Math.PI / 3;
+            // Linee per i denti
+            dc.drawLine(cx + 8 * Math.cos(ang), cy + 8 * Math.sin(ang), 
+                        cx + 13 * Math.cos(ang), cy + 13 * Math.sin(ang));
         }
     }
 }
