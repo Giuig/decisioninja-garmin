@@ -4,19 +4,20 @@ import Toybox.Graphics;
 import Toybox.System;
 import Toybox.Math;
 import Toybox.Timer;
+import Toybox.Attention; 
 
 // --- 1. ENTRY POINT ---
 class DecisioninjaApp extends Application.AppBase {
-    var binaryMode = 0;      // 0: Y/N, 1: L/R, 2: H/T
+    var binaryMode = 0;      
     var diceCount = 1;       
     var diceType = 6;        
+    var vibrationEnabled = true; 
 
     function initialize() { AppBase.initialize(); }
 
     function getInitialView() {
         var menu = new WatchUi.Menu2({:title=>"Decisioninja"});
         
-        // Main Menu Items with static descriptions
         menu.addItem(new WatchUi.MenuItem("Binary", "Pick between two", "id_binary", {:icon => new BinaryIcon()}));
         menu.addItem(new WatchUi.MenuItem("Dice", "Roll the dice", "id_dice", {:icon => new DiceIcon()}));
         menu.addItem(new WatchUi.MenuItem("Pointer", "Random direction", "id_pointer", {:icon => new PointerIcon()}));
@@ -29,6 +30,12 @@ class DecisioninjaApp extends Application.AppBase {
         var labels = ["YES / NO", "LEFT / RIGHT", "HEADS / TAILS"];
         return labels[binaryMode];
     }
+
+    function triggerVibe() {
+        if (vibrationEnabled && Attention has :vibrate) {
+            Attention.vibrate([new Attention.VibeProfile(50, 100)]);
+        }
+    }
 }
 
 // --- 2. MAIN MENU DELEGATE ---
@@ -40,20 +47,22 @@ class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
         var id = item.getId();
 
         if (id.equals("id_binary")) {
-            var bView = new BinaryView(app.binaryMode);
+            var bView = new BinaryView(app);
             WatchUi.pushView(bView, new BinaryDelegate(bView), WatchUi.SLIDE_LEFT);
         } else if (id.equals("id_dice")) {
             var dView = new DiceView(app);
             WatchUi.pushView(dView, new DiceDelegate(dView), WatchUi.SLIDE_LEFT);
         } else if (id.equals("id_pointer")) {
-            var pView = new PointerView();
+            var pView = new PointerView(app);
             WatchUi.pushView(pView, new PointerDelegate(pView), WatchUi.SLIDE_LEFT);
         } else if (id.equals("id_settings")) {
             var sMenu = new WatchUi.Menu2({:title=>"Settings"});
-            // Reusing the sleek GearIcon for all settings rows
             sMenu.addItem(new WatchUi.MenuItem("Binary Mode", app.getBinLabel(), "set_bin", {:icon => new GearIcon()}));
             sMenu.addItem(new WatchUi.MenuItem("Dice Count", app.diceCount.toString() + " Dice", "set_count", {:icon => new GearIcon()}));
             sMenu.addItem(new WatchUi.MenuItem("Dice Type", "D" + app.diceType.toString(), "set_type", {:icon => new GearIcon()}));
+            
+            sMenu.addItem(new WatchUi.ToggleMenuItem("Vibration", {:enabled=>"ON", :disabled=>"OFF"}, "set_vibe", app.vibrationEnabled, {:icon => new GearIcon()}));
+            
             WatchUi.pushView(sMenu, new SettingsDelegate(app), WatchUi.SLIDE_UP);
         }
     }
@@ -67,6 +76,14 @@ class SettingsDelegate extends WatchUi.Menu2InputDelegate {
 
     function onSelect(item) {
         var id = item.getId();
+        
+        if (id.equals("set_vibe")) {
+            if (item instanceof WatchUi.ToggleMenuItem) {
+                app.vibrationEnabled = item.isEnabled();
+            }
+            return;
+        }
+
         var subMenu = new WatchUi.Menu2({:title=>item.getLabel()});
 
         if (id.equals("set_bin")) {
@@ -103,28 +120,29 @@ class BinaryView extends WatchUi.View {
     var resultText = "???";
     var isSpinning = false;
     var myTimer;
-    var mode;
+    var app;
 
-    function initialize(m) {
+    function initialize(a) {
         View.initialize();
+        app = a;
         myTimer = new Timer.Timer();
-        mode = m;
         generateDecision();
     }
 
     function generateDecision() {
         isSpinning = true;
         resultText = "---";
+        myTimer.start(method(:onTimerEnd), 800, false);
         WatchUi.requestUpdate();
-        myTimer.start(method(:onTimerEnd), 750, false);
     }
 
     function onTimerEnd() {
         var rand = Math.rand() % 2;
-        if (mode == 0) { resultText = (rand == 0) ? "YES" : "NO"; }
-        else if (mode == 1) { resultText = (rand == 0) ? "LEFT" : "RIGHT"; }
+        if (app.binaryMode == 0) { resultText = (rand == 0) ? "YES" : "NO"; }
+        else if (app.binaryMode == 1) { resultText = (rand == 0) ? "LEFT" : "RIGHT"; }
         else { resultText = (rand == 0) ? "HEADS" : "TAILS"; }
         isSpinning = false;
+        app.triggerVibe();
         WatchUi.requestUpdate();
     }
 
@@ -132,7 +150,6 @@ class BinaryView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
-        // Sub-window white background
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28); 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -179,6 +196,7 @@ class DiceView extends WatchUi.View {
         diceValues[0] = (Math.rand() % app.diceType) + 1;
         diceValues[1] = (Math.rand() % app.diceType) + 1;
         isSpinning = false;
+        app.triggerVibe();
         WatchUi.requestUpdate();
     }
 
@@ -186,7 +204,6 @@ class DiceView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
-        // Sub-window icon
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -219,14 +236,16 @@ class DiceDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() { if (!view.isSpinning) { view.rollDice(); } return true; }
 }
 
-// --- 6. POINTER VIEW (Updated with Safe-Zone classic arrow) ---
+// --- 6. POINTER VIEW ---
 class PointerView extends WatchUi.View {
     var angle = 0;
     var isSpinning = false;
     var myTimer;
+    var app;
 
-    function initialize() {
+    function initialize(a) {
         View.initialize();
+        app = a;
         myTimer = new Timer.Timer();
         spin();
     }
@@ -240,21 +259,19 @@ class PointerView extends WatchUi.View {
     function onTimerEnd() {
         angle = Math.rand() % 360;
         isSpinning = false;
+        app.triggerVibe();
         WatchUi.requestUpdate();
     }
 
     function onUpdate(dc) {
-        // Clear background
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
-        // --- Sub-window Icon (Top-Right Circle) ---
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28); 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         dc.drawText(242, 38, Graphics.FONT_XTINY, "DIR", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
-        // --- Main Screen Content ---
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var cx = dc.getWidth() / 2;
         var cy = dc.getHeight() / 2;
@@ -262,44 +279,31 @@ class PointerView extends WatchUi.View {
         if (isSpinning) {
             dc.drawText(cx, cy, Graphics.FONT_MEDIUM, "SCANNING...", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         } else {
-            // Convert angle to radians
             var rad = (angle - 90) * (Math.PI / 180);
-            
-            // --- NEW SAFE DIMENSIONS (Avoids overlapping with sub-window) ---
-            var startOffset = 5;    // Distance from the exact center
-            var shaftLength = 20;   // Length of the straight body
-            var headLength = 15;    // Length of the triangular tip
-            var totalLength = startOffset + shaftLength + headLength; // ~40px total
-            
+            var startOffset = 5;    
+            var shaftLength = 20;   
+            var headLength = 15;    
+            var totalLength = startOffset + shaftLength + headLength; 
             var shaftWidth = 6;     
             var headWidth = 18;     
 
-            // Calculate coordinates
             var startX = cx + startOffset * Math.cos(rad);
             var startY = cy + startOffset * Math.sin(rad);
-            
             var shaftEndX = cx + (startOffset + shaftLength) * Math.cos(rad);
             var shaftEndY = cy + (startOffset + shaftLength) * Math.sin(rad);
-            
             var tipX = cx + totalLength * Math.cos(rad);
             var tipY = cy + totalLength * Math.sin(rad);
 
-            // --- 1. Draw the Shaft ---
             dc.setPenWidth(shaftWidth);
             dc.drawLine(startX, startY, shaftEndX, shaftEndY);
-
-            // --- 2. Draw the Arrowhead ---
-            var angleOrtho = rad + (Math.PI / 2); 
             
+            var angleOrtho = rad + (Math.PI / 2); 
             var headBaseX1 = shaftEndX + (headWidth / 2) * Math.cos(angleOrtho);
             var headBaseY1 = shaftEndY + (headWidth / 2) * Math.sin(angleOrtho);
-            
             var headBaseX2 = shaftEndX - (headWidth / 2) * Math.cos(angleOrtho);
             var headBaseY2 = shaftEndY - (headWidth / 2) * Math.sin(angleOrtho);
             
             dc.fillPolygon([[tipX, tipY], [headBaseX1, headBaseY1], [headBaseX2, headBaseY2]]);
-
-            // --- 3. UI Labels ---
             dc.drawText(cx, dc.getHeight() - 35, Graphics.FONT_XTINY, "GPS TO RETRY", Graphics.TEXT_JUSTIFY_CENTER);
         }
     }
@@ -311,71 +315,32 @@ class PointerDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() { if (!view.isSpinning) { view.spin(); } return true; }
 }
 
-// --- 7. HAND-DRAWN DRAWABLE ICONS ---
+// --- 7. HAND-DRAWN ICONS ---
 
 class BinaryIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
-
     function draw(dc) {
-        // 1. Clear background for the circular sub-window
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.clear();
-        
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.setPenWidth(2);
-        
-        var cx = dc.getWidth() / 2;
-        var cy = dc.getHeight() / 2;
-        
-        // 2. Draw the vertical divider line (the 7.5 1V14 path)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT); dc.setPenWidth(2);
+        var cx = dc.getWidth() / 2; var cy = dc.getHeight() / 2;
         dc.drawLine(cx, cy - 12, cx, cy + 12);
-        
-        // 3. Draw the "A" on the left
-        // Left leg, right leg, and crossbar
-        dc.drawLine(cx - 10, cy + 8, cx - 6, cy - 8); 
-        dc.drawLine(cx - 2, cy + 8, cx - 6, cy - 8);
-        dc.drawLine(cx - 8, cy + 2, cx - 4, cy + 2);
-        
-        // 4. Draw the "B" on the right
-        // Vertical spine
+        dc.drawLine(cx - 10, cy + 8, cx - 6, cy - 8); dc.drawLine(cx - 2, cy + 8, cx - 6, cy - 8); dc.drawLine(cx - 8, cy + 2, cx - 4, cy + 2);
         dc.drawLine(cx + 3, cy - 8, cx + 3, cy + 8);
-        // Top loop and bottom loop
-        dc.drawArc(cx + 3, cy - 4, 4, Graphics.ARC_CLOCKWISE, 90, 270);
-        dc.drawArc(cx + 3, cy + 4, 4, Graphics.ARC_CLOCKWISE, 90, 270);
+        dc.drawArc(cx + 3, cy - 4, 4, Graphics.ARC_CLOCKWISE, 90, 270); dc.drawArc(cx + 3, cy + 4, 4, Graphics.ARC_CLOCKWISE, 90, 270);
     }
 }
 
 class DiceIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
-
     function draw(dc) {
-        // 1. Clear background for the sub-window
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.clear();
-        
-        var cx = dc.getWidth() / 2;
-        var cy = dc.getHeight() / 2;
-        var size = 28; // Total size of the dice body
-        var half = size / 2;
-        var offset = 8; // Distance of dots from the center
-        
-        // 2. Draw the main black body of the dice
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
+        var cx = dc.getWidth() / 2; var cy = dc.getHeight() / 2;
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.fillRoundedRectangle(cx - half, cy - half, size, size, 4);
-        
-        // 3. Draw the 5 white dots (matching your SVG)
+        dc.fillRoundedRectangle(cx - 14, cy - 14, 28, 28, 4);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        
-        // Center dot
         dc.fillCircle(cx, cy, 3);
-        
-        // Top-left and Bottom-right
-        dc.fillCircle(cx - offset, cy - offset, 3);
-        dc.fillCircle(cx + offset, cy + offset, 3);
-        
-        // Top-right and Bottom-left
-        dc.fillCircle(cx + offset, cy - offset, 3);
-        dc.fillCircle(cx - offset, cy + offset, 3);
+        dc.fillCircle(cx - 8, cy - 8, 3); dc.fillCircle(cx + 8, cy + 8, 3);
+        dc.fillCircle(cx + 8, cy - 8, 3); dc.fillCircle(cx - 8, cy + 8, 3);
     }
 }
 
@@ -389,36 +354,14 @@ class PointerIcon extends WatchUi.Drawable {
     }
 }
 
-// New sleek Hexagonal Gear Icon (replicates the modern SVG design)
 class GearIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
-
     function draw(dc) {
-        // Clear background with white for the sub-window circle
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.clear();
-        
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        
-        var cx = dc.getWidth() / 2;
-        var cy = dc.getHeight() / 2;
-        
-        // Define the hexagon vertices (outer shape)
-        var r = 14; 
-        var points = [
-            [cx - r/2, cy - r], // Top Left
-            [cx + r/2, cy - r], // Top Right
-            [cx + r,   cy],     // Middle Right
-            [cx + r/2, cy + r], // Bottom Right
-            [cx - r/2, cy + r], // Bottom Left
-            [cx - r,   cy]      // Middle Left
-        ];
-        
-        // Draw the filled hexagon
+        var cx = dc.getWidth() / 2; var cy = dc.getHeight() / 2; var r = 14; 
+        var points = [[cx-r/2, cy-r], [cx+r/2, cy-r], [cx+r, cy], [cx+r/2, cy+r], [cx-r/2, cy+r], [cx-r, cy]];
         dc.fillPolygon(points);
-        
-        // "Cut" the center hole with a white circle
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillCircle(cx, cy, 5);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.fillCircle(cx, cy, 5);
     }
 }
