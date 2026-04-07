@@ -16,7 +16,7 @@ class DecisioninjaApp extends Application.AppBase {
     function getInitialView() {
         var menu = new WatchUi.Menu2({:title=>"Decisioninja"});
         
-        // Main Menu Items with static English descriptions
+        // Main Menu Items with static descriptions
         menu.addItem(new WatchUi.MenuItem("Binary", "Pick between two", "id_binary", {:icon => new BinaryIcon()}));
         menu.addItem(new WatchUi.MenuItem("Dice", "Roll the dice", "id_dice", {:icon => new DiceIcon()}));
         menu.addItem(new WatchUi.MenuItem("Pointer", "Random direction", "id_pointer", {:icon => new PointerIcon()}));
@@ -50,7 +50,7 @@ class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
             WatchUi.pushView(pView, new PointerDelegate(pView), WatchUi.SLIDE_LEFT);
         } else if (id.equals("id_settings")) {
             var sMenu = new WatchUi.Menu2({:title=>"Settings"});
-            // Use gear icon for all settings rows
+            // Reusing the sleek GearIcon for all settings rows
             sMenu.addItem(new WatchUi.MenuItem("Binary Mode", app.getBinLabel(), "set_bin", {:icon => new GearIcon()}));
             sMenu.addItem(new WatchUi.MenuItem("Dice Count", app.diceCount.toString() + " Dice", "set_count", {:icon => new GearIcon()}));
             sMenu.addItem(new WatchUi.MenuItem("Dice Type", "D" + app.diceType.toString(), "set_type", {:icon => new GearIcon()}));
@@ -132,6 +132,7 @@ class BinaryView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
+        // Sub-window white background
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28); 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -185,6 +186,7 @@ class DiceView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
+        // Sub-window icon
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -245,6 +247,7 @@ class PointerView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
+        // Sub-window icon
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(242, 38, 28);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -280,6 +283,7 @@ class PointerDelegate extends WatchUi.BehaviorDelegate {
 }
 
 // --- 7. HAND-DRAWN DRAWABLE ICONS ---
+
 class BinaryIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
     function draw(dc) {
@@ -310,16 +314,36 @@ class PointerIcon extends WatchUi.Drawable {
     }
 }
 
+// New sleek Hexagonal Gear Icon (replicates the modern SVG design)
 class GearIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
+
     function draw(dc) {
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT); dc.setPenWidth(2);
-        var cx = dc.getWidth()/2; var cy = dc.getHeight()/2;
-        dc.drawCircle(cx, cy, 10); dc.drawCircle(cx, cy, 4);
-        for (var i = 0; i < 6; i++) {
-            var ang = i * Math.PI / 3;
-            dc.drawLine(cx + 8 * Math.cos(ang), cy + 8 * Math.sin(ang), cx + 13 * Math.cos(ang), cy + 13 * Math.sin(ang));
-        }
+        // Clear background with white for the sub-window circle
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.clear();
+        
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        
+        var cx = dc.getWidth() / 2;
+        var cy = dc.getHeight() / 2;
+        
+        // Define the hexagon vertices (outer shape)
+        var r = 14; 
+        var points = [
+            [cx - r/2, cy - r], // Top Left
+            [cx + r/2, cy - r], // Top Right
+            [cx + r,   cy],     // Middle Right
+            [cx + r/2, cy + r], // Bottom Right
+            [cx - r/2, cy + r], // Bottom Left
+            [cx - r,   cy]      // Middle Left
+        ];
+        
+        // Draw the filled hexagon
+        dc.fillPolygon(points);
+        
+        // "Cut" the center hole with a white circle
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.fillCircle(cx, cy, 5);
     }
 }
