@@ -5,3 +5,6 @@ bin/
 *.keystore
 *.p12
 *.jks
+bin/gen/
+bin/internal-mir/
+bin/mir/
