@@ -1,4 +1,5 @@
 import Toybox.Application;
+import Toybox.Application.Storage; // Necessario per la memoria persistente
 import Toybox.WatchUi;
 import Toybox.Graphics;
 import Toybox.System;
@@ -6,14 +7,37 @@ import Toybox.Math;
 import Toybox.Timer;
 import Toybox.Attention; 
 
-// --- 1. ENTRY POINT ---
+// --- 1. ENTRY POINT CON MEMORIA ---
 class DecisioninjaApp extends Application.AppBase {
     var binaryMode = 0;      
     var diceCount = 1;       
     var diceType = 6;        
     var vibrationEnabled = true; 
 
-    function initialize() { AppBase.initialize(); }
+    function initialize() { 
+        AppBase.initialize(); 
+        
+        // Carica le preferenze salvate se esistono
+        var savedBin = Storage.getValue("bin");
+        if (savedBin != null) { binaryMode = savedBin; }
+        
+        var savedCnt = Storage.getValue("cnt");
+        if (savedCnt != null) { diceCount = savedCnt; }
+        
+        var savedTyp = Storage.getValue("typ");
+        if (savedTyp != null) { diceType = savedTyp; }
+        
+        var savedVib = Storage.getValue("vib");
+        if (savedVib != null) { vibrationEnabled = savedVib; }
+    }
+
+    // Salva tutto quando l'app viene chiusa
+    function onStop(state) {
+        Storage.setValue("bin", binaryMode);
+        Storage.setValue("cnt", diceCount);
+        Storage.setValue("typ", diceType);
+        Storage.setValue("vib", vibrationEnabled);
+    }
 
     function getInitialView() {
         var menu = new WatchUi.Menu2({:title=>"Decisioninja"});
@@ -141,7 +165,7 @@ class BinaryView extends WatchUi.View {
         if (isSpinning) {
             var dots = ["", ".", "..", "..."][(System.getTimer() / 250) % 4];
             dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_MEDIUM, "DECIDING" + dots, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-            WatchUi.requestUpdate(); // Keeps the animation moving
+            WatchUi.requestUpdate(); 
         } else {
             dc.drawText(dc.getWidth() / 2, 45, Graphics.FONT_XTINY, "DECISION:", Graphics.TEXT_JUSTIFY_CENTER);
             dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2 + 5, Graphics.FONT_NUMBER_THAI_HOT, resultText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
