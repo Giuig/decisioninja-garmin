@@ -219,7 +219,7 @@ class DiceDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() { if (!view.isSpinning) { view.rollDice(); } return true; }
 }
 
-// --- 6. POINTER VIEW ---
+// --- 6. POINTER VIEW (Updated with Safe-Zone classic arrow) ---
 class PointerView extends WatchUi.View {
     var angle = 0;
     var isSpinning = false;
@@ -244,15 +244,17 @@ class PointerView extends WatchUi.View {
     }
 
     function onUpdate(dc) {
+        // Clear background
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         
-        // Sub-window icon
+        // --- Sub-window Icon (Top-Right Circle) ---
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillCircle(242, 38, 28);
+        dc.fillCircle(242, 38, 28); 
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         dc.drawText(242, 38, Graphics.FONT_XTINY, "DIR", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
 
+        // --- Main Screen Content ---
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var cx = dc.getWidth() / 2;
         var cy = dc.getHeight() / 2;
@@ -260,17 +262,44 @@ class PointerView extends WatchUi.View {
         if (isSpinning) {
             dc.drawText(cx, cy, Graphics.FONT_MEDIUM, "SCANNING...", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         } else {
+            // Convert angle to radians
             var rad = (angle - 90) * (Math.PI / 180);
-            var length = 35; 
-            var px = cx + length * Math.cos(rad);
-            var py = cy + length * Math.sin(rad);
-            var baseWidth = 12;
-            var bx1 = cx + baseWidth * Math.cos(rad + Math.PI/2);
-            var by1 = cy + baseWidth * Math.sin(rad + Math.PI/2);
-            var bx2 = cx + baseWidth * Math.cos(rad - Math.PI/2);
-            var by2 = cy + baseWidth * Math.sin(rad - Math.PI/2);
+            
+            // --- NEW SAFE DIMENSIONS (Avoids overlapping with sub-window) ---
+            var startOffset = 5;    // Distance from the exact center
+            var shaftLength = 20;   // Length of the straight body
+            var headLength = 15;    // Length of the triangular tip
+            var totalLength = startOffset + shaftLength + headLength; // ~40px total
+            
+            var shaftWidth = 6;     
+            var headWidth = 18;     
 
-            dc.fillPolygon([[px, py], [bx1, by1], [bx2, by2]]);
+            // Calculate coordinates
+            var startX = cx + startOffset * Math.cos(rad);
+            var startY = cy + startOffset * Math.sin(rad);
+            
+            var shaftEndX = cx + (startOffset + shaftLength) * Math.cos(rad);
+            var shaftEndY = cy + (startOffset + shaftLength) * Math.sin(rad);
+            
+            var tipX = cx + totalLength * Math.cos(rad);
+            var tipY = cy + totalLength * Math.sin(rad);
+
+            // --- 1. Draw the Shaft ---
+            dc.setPenWidth(shaftWidth);
+            dc.drawLine(startX, startY, shaftEndX, shaftEndY);
+
+            // --- 2. Draw the Arrowhead ---
+            var angleOrtho = rad + (Math.PI / 2); 
+            
+            var headBaseX1 = shaftEndX + (headWidth / 2) * Math.cos(angleOrtho);
+            var headBaseY1 = shaftEndY + (headWidth / 2) * Math.sin(angleOrtho);
+            
+            var headBaseX2 = shaftEndX - (headWidth / 2) * Math.cos(angleOrtho);
+            var headBaseY2 = shaftEndY - (headWidth / 2) * Math.sin(angleOrtho);
+            
+            dc.fillPolygon([[tipX, tipY], [headBaseX1, headBaseY1], [headBaseX2, headBaseY2]]);
+
+            // --- 3. UI Labels ---
             dc.drawText(cx, dc.getHeight() - 35, Graphics.FONT_XTINY, "GPS TO RETRY", Graphics.TEXT_JUSTIFY_CENTER);
         }
     }
