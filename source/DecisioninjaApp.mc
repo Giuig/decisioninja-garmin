@@ -42,6 +42,8 @@ class DecisioninjaApp extends Application.AppBase {
         menu.addItem(new WatchUi.MenuItem("Dice", "Roll the dice", "id_dice", {:icon => new DiceIcon()}));
         menu.addItem(new WatchUi.MenuItem("Pointer", "Random direction", "id_pointer", {:icon => new PointerIcon()}));
         menu.addItem(new WatchUi.MenuItem("Settings", "Configure app", "id_settings", {:icon => new GearIcon()}));
+        // Added About section
+        menu.addItem(new WatchUi.MenuItem("About", "Credits & Info", "id_about", {:icon => new NinjaIconSmall()}));
         
         return [ menu, new MyMenuDelegate(self) ];
     }
@@ -58,6 +60,8 @@ class DecisioninjaApp extends Application.AppBase {
     }
 }
 
+// --- DELEGATES ---
+
 class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
     var app;
     function initialize(a) { Menu2InputDelegate.initialize(); app = a; }
@@ -73,6 +77,8 @@ class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
         } else if (id.equals("id_pointer")) {
             var pView = new PointerView(app);
             WatchUi.pushView(pView, new PointerDelegate(pView), WatchUi.SLIDE_LEFT);
+        } else if (id.equals("id_about")) {
+            WatchUi.pushView(new CreditsView(), new WatchUi.BehaviorDelegate(), WatchUi.SLIDE_UP);
         } else if (id.equals("id_settings")) {
             var sMenu = new WatchUi.Menu2({:title=>"Settings"});
             sMenu.addItem(new WatchUi.MenuItem("Binary Mode", app.getBinLabel(), "set_bin", {:icon => new GearIcon()}));
@@ -125,6 +131,31 @@ class ApplySettingsDelegate extends WatchUi.Menu2InputDelegate {
     }
 }
 
+// --- VIEWS ---
+
+class CreditsView extends WatchUi.View {
+    function initialize() { View.initialize(); }
+    function onUpdate(dc) {
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.clear();
+        
+        var cx = dc.getWidth() / 2;
+        
+        // Draw Mascot (ensure id is decisioninja_icon in resources)
+        var ninja = WatchUi.loadResource(Rez.Drawables.decisioninja_icon);
+        dc.drawBitmap(cx - 32, 15, ninja);
+        
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(cx, 85, Graphics.FONT_SMALL, "Decisioninja", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, 105, Graphics.FONT_XTINY, "v1.0.1", Graphics.TEXT_JUSTIFY_CENTER);
+        
+        dc.setPenWidth(1);
+        dc.drawLine(cx - 40, 125, cx + 40, 125);
+        
+        dc.drawText(cx, 130, Graphics.FONT_XTINY, "Made by Giuig", Graphics.TEXT_JUSTIFY_CENTER);
+    }
+}
+
 class BinaryView extends WatchUi.View {
     var resultText = "???";
     var isSpinning = false;
@@ -153,16 +184,11 @@ class BinaryView extends WatchUi.View {
     function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillCircle(242, 38, 28); 
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(242, 38, Graphics.FONT_XTINY, isSpinning ? ".." : "BI", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         if (isSpinning) {
             var dots = ["", ".", "..", "..."][(System.getTimer() / 250) % 4];
             dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2, Graphics.FONT_MEDIUM, "DECIDING" + dots, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-            WatchUi.requestUpdate(); 
+            WatchUi.requestUpdate();
         } else {
             dc.drawText(dc.getWidth() / 2, 45, Graphics.FONT_XTINY, "DECISION:", Graphics.TEXT_JUSTIFY_CENTER);
             dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2 + 5, Graphics.FONT_NUMBER_THAI_HOT, resultText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
@@ -202,11 +228,6 @@ class DiceView extends WatchUi.View {
     function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillCircle(242, 38, 28);
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(242, 38, Graphics.FONT_XTINY, "D" + app.diceType, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         if (isSpinning) {
             var dots = ["", ".", "..", "..."][(System.getTimer() / 250) % 4];
@@ -260,11 +281,6 @@ class PointerView extends WatchUi.View {
     function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
-        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillCircle(242, 38, 28); 
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(242, 38, Graphics.FONT_XTINY, "DIR", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var cx = dc.getWidth() / 2;
         var cy = dc.getHeight() / 2;
@@ -299,6 +315,8 @@ class PointerDelegate extends WatchUi.BehaviorDelegate {
     function initialize(v) { BehaviorDelegate.initialize(); view = v; }
     function onSelect() { if (!view.isSpinning) { view.spin(); } return true; }
 }
+
+// --- DRAWABLES / ICONS ---
 
 class BinaryIcon extends WatchUi.Drawable {
     function initialize() { Drawable.initialize({}); }
@@ -344,5 +362,18 @@ class GearIcon extends WatchUi.Drawable {
         var cx = dc.getWidth() / 2, cy = dc.getHeight() / 2, r = 12; 
         dc.fillPolygon([[cx-r/2, cy-r], [cx+r/2, cy-r], [cx+r, cy], [cx+r/2, cy+r], [cx-r/2, cy+r], [cx-r, cy]]);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.fillCircle(cx, cy, 4);
+    }
+}
+
+// Small ninja head for the menu
+class NinjaIconSmall extends WatchUi.Drawable {
+    function initialize() { Drawable.initialize({}); }
+    function draw(dc) {
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        var cx = dc.getWidth() / 2; var cy = dc.getHeight() / 2;
+        dc.fillRectangle(cx - 12, cy - 8, 24, 16); // Face wrap
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.fillRectangle(cx - 8, cy - 3, 16, 4); // Eye slit
     }
 }
