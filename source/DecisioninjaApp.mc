@@ -94,7 +94,7 @@ class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
         } else if (id.equals("id_settings")) {
             var sMenu = new WatchUi.Menu2({:title=>"Settings"});
             sMenu.addItem(new WatchUi.MenuItem("Binary Mode", app.getBinLabel(), "set_bin", {:icon => new GearIcon()}));
-            sMenu.addItem(new WatchUi.MenuItem("Dice Count", app.diceCount.toString() + " Dice", "set_count", {:icon => new GearIcon()}));
+            sMenu.addItem(new WatchUi.MenuItem("Dice Count", app.diceCount == 1 ? "1 Die" : app.diceCount.toString() + " Dice", "set_count", {:icon => new GearIcon()}));
             sMenu.addItem(new WatchUi.MenuItem("Dice Type", "D" + app.diceType.toString(), "set_type", {:icon => new GearIcon()}));
             sMenu.addItem(new WatchUi.ToggleMenuItem("Vibration", {:enabled=>"ON", :disabled=>"OFF"}, "set_vibe", app.vibrationEnabled, {:icon => new GearIcon()}));
             WatchUi.pushView(sMenu, new SettingsDelegate(app), WatchUi.SLIDE_UP);
@@ -137,7 +137,7 @@ class ApplySettingsDelegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item) {
         var val = item.getId();
         if (type.equals("set_bin")) { app.binaryMode = val; settingItem.setSubLabel(app.getBinLabel()); }
-        else if (type.equals("set_count")) { app.diceCount = val; settingItem.setSubLabel(val.toString() + " Dice"); }
+        else if (type.equals("set_count")) { app.diceCount = val; settingItem.setSubLabel(val == 1 ? "1 Die" : val.toString() + " Dice"); }
         else if (type.equals("set_type")) { app.diceType = val; settingItem.setSubLabel("D" + val.toString()); }
         WatchUi.popView(WatchUi.SLIDE_RIGHT);
     }
