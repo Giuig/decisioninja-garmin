@@ -1,6 +1,6 @@
 # Decisioninja
 
-A decision-making companion app for Garmin Instinct 3 Solar 45mm.
+A Garmin port of [Decisioninja](https://github.com/Giuig/decisioninja) - a decision-making companion app for Garmin Instinct 3 Solar 45mm.
 
 ## Features
 
