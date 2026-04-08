@@ -147,7 +147,7 @@ class CreditsView extends WatchUi.View {
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, 85, Graphics.FONT_SMALL, "Decisioninja", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(cx, 105, Graphics.FONT_XTINY, "v1.0.1", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, 105, Graphics.FONT_XTINY, "v1.0.2", Graphics.TEXT_JUSTIFY_CENTER);
         
         dc.setPenWidth(1);
         dc.drawLine(cx - 40, 125, cx + 40, 125);
