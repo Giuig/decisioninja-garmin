@@ -310,12 +310,12 @@ class PointerView extends WatchUi.View {
         WatchUi.requestUpdate();
     }
 
-    function onUpdate(dc) {
+function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         
-        // Draw compass indicator at top right
+        // Draw compass indicator at top right (Porthole)
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
         dc.fillCircle(ICON_X, ICON_Y, ICON_R);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
@@ -330,21 +330,44 @@ class PointerView extends WatchUi.View {
             dc.drawText(cx, cy, Graphics.FONT_MEDIUM, "POINTING" + dots, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
             WatchUi.requestUpdate();
         } else {
+            // Convert to radians (Garmin uses 0 at right, subtract 90 to have 0 at top)
             var rad = (angle - 90) * (Math.PI / 180);
-            var startOffset = 5, shaftLength = 20, headLength = 15, shaftWidth = 6, headWidth = 18;
-            var startX = cx + startOffset * Math.cos(rad);
-            var startY = cy + startOffset * Math.sin(rad);
-            var shaftEndX = cx + (startOffset + shaftLength) * Math.cos(rad);
-            var shaftEndY = cy + (startOffset + shaftLength) * Math.sin(rad);
-            var tipX = cx + (startOffset + shaftLength + headLength) * Math.cos(rad);
-            var tipY = cy + (startOffset + shaftLength + headLength) * Math.sin(rad);
 
+            // --- LARGER ARROW DIMENSIONS ---
+            var fullLength = 60;  // Total arrow length
+            var headLength = 25;  // Tip length
+            var headWidth = 30;   // Tip width
+            var shaftWidth = 10;  // Shaft thickness
+            
+            // To rotate in place, center (cx, cy) must be at half the total length
+            var halfLen = fullLength / 2;
+            
+            // Start point (tail) and end of shaft (where tip begins)
+            var tailX = cx - halfLen * Math.cos(rad);
+            var tailY = cy - halfLen * Math.sin(rad);
+            
+            var headBaseX = cx + (halfLen - headLength) * Math.cos(rad);
+            var headBaseY = cy + (halfLen - headLength) * Math.sin(rad);
+            
+            // Extreme tip
+            var tipX = cx + halfLen * Math.cos(rad);
+            var tipY = cy + halfLen * Math.sin(rad);
+
+            // Draw shaft
             dc.setPenWidth(shaftWidth);
-            dc.drawLine(startX, startY, shaftEndX, shaftEndY);
+            dc.drawLine(tailX, tailY, headBaseX, headBaseY);
+
+            // Calculate triangle base vertices (perpendicular to shaft)
             var angleOrtho = rad + (Math.PI / 2); 
-            var hX1 = shaftEndX + (headWidth / 2) * Math.cos(angleOrtho), hY1 = shaftEndY + (headWidth / 2) * Math.sin(angleOrtho);
-            var hX2 = shaftEndX - (headWidth / 2) * Math.cos(angleOrtho), hY2 = shaftEndY - (headWidth / 2) * Math.sin(angleOrtho);
+            var hX1 = headBaseX + (headWidth / 2) * Math.cos(angleOrtho);
+            var hY1 = headBaseY + (headWidth / 2) * Math.sin(angleOrtho);
+            var hX2 = headBaseX - (headWidth / 2) * Math.cos(angleOrtho);
+            var hY2 = headBaseY - (headWidth / 2) * Math.sin(angleOrtho);
+
+            // Draw tip
             dc.fillPolygon([[tipX, tipY], [hX1, hY1], [hX2, hY2]]);
+
+            // Footer
             dc.drawText(cx, dc.getHeight() - 35, Graphics.FONT_XTINY, "GPS TO RETRY", Graphics.TEXT_JUSTIFY_CENTER);
         }
     }
