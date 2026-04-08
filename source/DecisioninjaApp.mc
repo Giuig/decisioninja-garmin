@@ -7,6 +7,11 @@ import Toybox.Math;
 import Toybox.Timer;
 import Toybox.Attention;
 
+// Top right icon constants
+var ICON_X = 144;
+var ICON_Y = 31;
+var ICON_R = 31;
+
 class DecisioninjaApp extends Application.AppBase {
     var binaryMode = 0;
     var diceCount = 1;
@@ -141,9 +146,15 @@ class CreditsView extends WatchUi.View {
         
         var cx = dc.getWidth() / 2;
         
-        // Draw Mascot (ensure id is decisioninja_icon in resources)
+        // Draw icon indicator at top right
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
+        dc.fillCircle(ICON_X, ICON_Y, ICON_R);
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(ICON_X, ICON_Y, Graphics.FONT_XTINY, "i", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        
+        // Draw Mascot centered
         var ninja = WatchUi.loadResource(Rez.Drawables.decisioninja_icon);
-        dc.drawBitmap(cx - 32, 15, ninja);
+        dc.drawBitmap(cx - 55, 15, ninja);
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, 85, Graphics.FONT_SMALL, "Decisioninja", Graphics.TEXT_JUSTIFY_CENTER);
@@ -187,17 +198,14 @@ class BinaryView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         
         // Draw binary mode indicator at top right
-        var circleX = 144;
-        var circleY = 32;
-        var circleR = 31;
         var modeText = "";
         if (app.binaryMode == 0) { modeText = "Y/N"; }
         else if (app.binaryMode == 1) { modeText = "L/R"; }
         else { modeText = "H/T"; }
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillCircle(circleX, circleY, circleR);
+        dc.fillCircle(ICON_X, ICON_Y, ICON_R);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(circleX, circleY, Graphics.FONT_XTINY, modeText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(ICON_X, ICON_Y, Graphics.FONT_XTINY, modeText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         if (isSpinning) {
@@ -246,14 +254,11 @@ class DiceView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         
         // Draw dice type info at top right - matching menu icon position
-        var circleX = 144;
-        var circleY = 32;
-        var circleR = 31;
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillCircle(circleX, circleY, circleR);
+        dc.fillCircle(ICON_X, ICON_Y, ICON_R);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
         var diceText = app.diceCount.toString() + "D" + app.diceType.toString();
-        dc.drawText(circleX, circleY, Graphics.FONT_XTINY, diceText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(ICON_X, ICON_Y, Graphics.FONT_XTINY, diceText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         if (isSpinning) {
@@ -265,13 +270,13 @@ class DiceView extends WatchUi.View {
             var cy = dc.getHeight() / 2;
             dc.setPenWidth(3);
             if (app.diceCount == 1) {
-                dc.drawRoundedRectangle(cx - 35, cy - 35, 70, 70, 8);
-                dc.drawText(cx, cy, Graphics.FONT_NUMBER_THAI_HOT, diceValues[0].toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.drawRoundedRectangle(cx - 25, cy - 25, 50, 50, 6);
+                dc.drawText(cx, cy, Graphics.FONT_NUMBER_MEDIUM, diceValues[0].toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
             } else {
                 dc.drawRoundedRectangle(cx - 55, cy - 40, 50, 50, 5);
-                dc.drawText(cx - 30, cy - 15, Graphics.FONT_NUMBER_MEDIUM, diceValues[0].toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.drawText(cx - 29, cy - 14, Graphics.FONT_NUMBER_MEDIUM, diceValues[0].toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
                 dc.drawRoundedRectangle(cx + 5, cy - 10, 50, 50, 5);
-                dc.drawText(cx + 30, cy + 15, Graphics.FONT_NUMBER_MEDIUM, diceValues[1].toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+                dc.drawText(cx + 31, cy + 16, Graphics.FONT_NUMBER_MEDIUM, diceValues[1].toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
             }
             dc.drawText(dc.getWidth() / 2, dc.getHeight() - 35, Graphics.FONT_XTINY, "GPS TO RETRY", Graphics.TEXT_JUSTIFY_CENTER);
         }
@@ -311,13 +316,10 @@ class PointerView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         
         // Draw compass indicator at top right
-        var circleX = 144;
-        var circleY = 32;
-        var circleR = 31;
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE);
-        dc.fillCircle(circleX, circleY, circleR);
+        dc.fillCircle(ICON_X, ICON_Y, ICON_R);
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(circleX, circleY, Graphics.FONT_XTINY, "DIR", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(ICON_X, ICON_Y, Graphics.FONT_XTINY, "DIR", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         var cx = dc.getWidth() / 2;
