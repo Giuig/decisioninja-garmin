@@ -12,6 +12,13 @@ var ICON_X = 144;
 var ICON_Y = 31;
 var ICON_R = 31;
 
+// Footer constants
+var FOOTER_Y = 35;
+
+function drawFooter(dc, text) {
+    dc.drawText(dc.getWidth() / 2, dc.getHeight() - FOOTER_Y, Graphics.FONT_XTINY, text, Graphics.TEXT_JUSTIFY_CENTER);
+}
+
 class DecisioninjaApp extends Application.AppBase {
     var binaryMode = 0;
     var diceCount = 1;
@@ -215,7 +222,7 @@ class BinaryView extends WatchUi.View {
         } else {
             // dc.drawText(dc.getWidth() / 2, 45, Graphics.FONT_XTINY, "RESULT:", Graphics.TEXT_JUSTIFY_CENTER);
             dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2 + 5, Graphics.FONT_NUMBER_THAI_HOT, resultText, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-            dc.drawText(dc.getWidth() / 2, dc.getHeight() - 35, Graphics.FONT_XTINY, "GPS TO RETRY", Graphics.TEXT_JUSTIFY_CENTER);
+            drawFooter(dc, "GPS TO RETRY");
         }
     }
 }
@@ -278,7 +285,7 @@ class DiceView extends WatchUi.View {
                 dc.drawRoundedRectangle(cx + 5, cy - 10, 50, 50, 5);
                 dc.drawText(cx + 31, cy + 16, Graphics.FONT_NUMBER_MEDIUM, diceValues[1].toString(), Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
             }
-            dc.drawText(dc.getWidth() / 2, dc.getHeight() - 35, Graphics.FONT_XTINY, "GPS TO RETRY", Graphics.TEXT_JUSTIFY_CENTER);
+            drawFooter(dc, "GPS TO RETRY");
         }
     }
 }
@@ -368,7 +375,7 @@ function onUpdate(dc) {
             dc.fillPolygon([[tipX, tipY], [hX1, hY1], [hX2, hY2]]);
 
             // Footer
-            dc.drawText(cx, dc.getHeight() - 35, Graphics.FONT_XTINY, "GPS TO RETRY", Graphics.TEXT_JUSTIFY_CENTER);
+            drawFooter(dc, "GPS TO RETRY");
         }
     }
 }
