@@ -19,6 +19,14 @@ function drawFooter(dc, text) {
     dc.drawText(dc.getWidth() / 2, dc.getHeight() - FOOTER_Y, Graphics.FONT_XTINY, text, Graphics.TEXT_JUSTIFY_CENTER);
 }
 
+function getDiceLabel(count) {
+    return count == 1 ? "1 Die" : count.toString() + " Dice";
+}
+
+function getBinLabels() {
+    return ["YES / NO", "LEFT / RIGHT", "HEADS / TAILS"];
+}
+
 class DecisioninjaApp extends Application.AppBase {
     var binaryMode = 0;
     var diceCount = 1;
@@ -61,8 +69,7 @@ class DecisioninjaApp extends Application.AppBase {
     }
 
     function getBinLabel() {
-        var labels = ["YES / NO", "LEFT / RIGHT", "HEADS / TAILS"];
-        return labels[binaryMode];
+        return getBinLabels()[binaryMode];
     }
 
     function triggerVibe() {
@@ -94,7 +101,7 @@ class MyMenuDelegate extends WatchUi.Menu2InputDelegate {
         } else if (id.equals("id_settings")) {
             var sMenu = new WatchUi.Menu2({:title=>"Settings"});
             sMenu.addItem(new WatchUi.MenuItem("Binary Mode", app.getBinLabel(), "set_bin", {:icon => new GearIcon()}));
-            sMenu.addItem(new WatchUi.MenuItem("Dice Count", app.diceCount == 1 ? "1 Die" : app.diceCount.toString() + " Dice", "set_count", {:icon => new GearIcon()}));
+            sMenu.addItem(new WatchUi.MenuItem("Dice Count", getDiceLabel(app.diceCount), "set_count", {:icon => new GearIcon()}));
             sMenu.addItem(new WatchUi.MenuItem("Dice Type", "D" + app.diceType.toString(), "set_type", {:icon => new GearIcon()}));
             sMenu.addItem(new WatchUi.ToggleMenuItem("Vibration", {:enabled=>"ON", :disabled=>"OFF"}, "set_vibe", app.vibrationEnabled, {:icon => new GearIcon()}));
             WatchUi.pushView(sMenu, new SettingsDelegate(app), WatchUi.SLIDE_UP);
@@ -115,17 +122,22 @@ class SettingsDelegate extends WatchUi.Menu2InputDelegate {
         }
         var subMenu = new WatchUi.Menu2({:title=>item.getLabel()});
         if (id.equals("set_bin")) {
-            subMenu.addItem(new WatchUi.MenuItem("YES / NO", "", 0, {:icon => new GearIcon()}));
-            subMenu.addItem(new WatchUi.MenuItem("LEFT / RIGHT", "", 1, {:icon => new GearIcon()}));
-            subMenu.addItem(new WatchUi.MenuItem("HEADS / TAILS", "", 2, {:icon => new GearIcon()}));
+            var binLabels = getBinLabels();
+            for(var i=0; i<binLabels.size(); i++) {
+                subMenu.addItem(new WatchUi.MenuItem(binLabels[i], "", i, {:icon => new GearIcon()}));
+            }
+            subMenu.setFocus(app.binaryMode);
         } else if (id.equals("set_count")) {
             subMenu.addItem(new WatchUi.MenuItem("1 Die", "", 1, {:icon => new GearIcon()}));
             subMenu.addItem(new WatchUi.MenuItem("2 Dice", "", 2, {:icon => new GearIcon()}));
+            subMenu.setFocus(app.diceCount - 1);
         } else if (id.equals("set_type")) {
             var types = [4, 6, 8, 10, 12, 20];
             for(var i=0; i<types.size(); i++) {
                 subMenu.addItem(new WatchUi.MenuItem("D" + types[i], "", types[i], {:icon => new GearIcon()}));
             }
+            var focusIdx = types.indexOf(app.diceType);
+            if (focusIdx >= 0) { subMenu.setFocus(focusIdx); }
         }
         WatchUi.pushView(subMenu, new ApplySettingsDelegate(app, id, item), WatchUi.SLIDE_LEFT);
     }
@@ -137,7 +149,7 @@ class ApplySettingsDelegate extends WatchUi.Menu2InputDelegate {
     function onSelect(item) {
         var val = item.getId();
         if (type.equals("set_bin")) { app.binaryMode = val; settingItem.setSubLabel(app.getBinLabel()); }
-        else if (type.equals("set_count")) { app.diceCount = val; settingItem.setSubLabel(val == 1 ? "1 Die" : val.toString() + " Dice"); }
+        else if (type.equals("set_count")) { app.diceCount = val; settingItem.setSubLabel(getDiceLabel(val)); }
         else if (type.equals("set_type")) { app.diceType = val; settingItem.setSubLabel("D" + val.toString()); }
         WatchUi.popView(WatchUi.SLIDE_RIGHT);
     }
@@ -165,7 +177,7 @@ class CreditsView extends WatchUi.View {
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, 85, Graphics.FONT_SMALL, "Decisioninja", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(cx, 105, Graphics.FONT_XTINY, "v1.0.2", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, 105, Graphics.FONT_XTINY, "v1.0.4", Graphics.TEXT_JUSTIFY_CENTER);
         
         dc.setPenWidth(1);
         dc.drawLine(cx - 40, 125, cx + 40, 125);
