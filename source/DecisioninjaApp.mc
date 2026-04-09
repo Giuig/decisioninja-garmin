@@ -63,7 +63,7 @@ class DecisioninjaApp extends Application.AppBase {
         menu.addItem(new WatchUi.MenuItem("Pointer", "Random direction", "id_pointer", {:icon => new PointerIcon()}));
         menu.addItem(new WatchUi.MenuItem("Settings", "Configure app", "id_settings", {:icon => new GearIcon()}));
         // Added About section
-        menu.addItem(new WatchUi.MenuItem("About", "Credits & Info", "id_about", {:icon => new NinjaIconSmall()}));
+        menu.addItem(new WatchUi.MenuItem("About", "Credits & Info", "id_about", {:icon => new InfoIcon()}));
         
         return [ menu, new MyMenuDelegate(self) ];
     }
@@ -177,7 +177,7 @@ class CreditsView extends WatchUi.View {
         
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(cx, 85, Graphics.FONT_SMALL, "Decisioninja", Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(cx, 105, Graphics.FONT_XTINY, "v1.0.4", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(cx, 105, Graphics.FONT_XTINY, "v1.0.5", Graphics.TEXT_JUSTIFY_CENTER);
         
         dc.setPenWidth(1);
         dc.drawLine(cx - 40, 125, cx + 40, 125);
@@ -444,6 +444,17 @@ class GearIcon extends WatchUi.Drawable {
         var cx = dc.getWidth() / 2, cy = dc.getHeight() / 2, r = 12; 
         dc.fillPolygon([[cx-r/2, cy-r], [cx+r/2, cy-r], [cx+r, cy], [cx+r/2, cy+r], [cx-r/2, cy+r], [cx-r, cy]]);
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.fillCircle(cx, cy, 4);
+    }
+}
+
+class InfoIcon extends WatchUi.Drawable {
+    function initialize() { Drawable.initialize({}); }
+    function draw(dc) {
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_WHITE); dc.clear();
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        var cx = dc.getWidth() / 2; var cy = dc.getHeight() / 2;
+        dc.setPenWidth(2); dc.drawCircle(cx, cy, 14);
+        dc.drawText(cx, cy, Graphics.FONT_XTINY, "i", Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
     }
 }
 
